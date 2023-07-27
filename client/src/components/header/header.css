@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding-bottom: 0.063rem;
+    margin: 0;
+    min-width: fit-content;
+    height: auto;
+}
+
+.header {
+    padding: 0.625rem;
+    background-color: #373A40;
+    color:aliceblue;
+    position: relative;
+    min-width: 100%;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+}
