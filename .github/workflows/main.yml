@@ -1,0 +1,17 @@
+    name: Deploy
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - uses: akhileshns/heroku-deploy@v3.12.11
+            with:
+              heroku_api_key: ${{4b58f728-3f68-433b-9fdc-fbbe3aba6ae4}}
+              heroku_app_name: "sustain-a-plate"
+              heroku_email: "w_riffe@hotmail.com"
