@@ -4,7 +4,9 @@
   "description": "Food",
   "main": "./client/src/index.js",
   "scripts": {
-    "start": "cd ./client/src && npm start",
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
     "seed": "cd server && npm run seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +22,8 @@
   "homepage": "https://github.com/Will-Riffe/Sustain-A-Plate#readme",
   "dependencies": {
     "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
