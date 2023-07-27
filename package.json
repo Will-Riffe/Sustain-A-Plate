@@ -4,17 +4,17 @@
   "description": "Food",
   "main": "./client/src/index.js",
   "scripts": {
-    "start": "cd ./client/src && node index",
+    "start": "cd ./client/src && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Will-Riffe/fargo-island-cannery.git"
+    "url": "git+https://github.com/Will-Riffe/Sustain-A-Plate.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Will-Riffe/fargo-island-cannery/issues"
+    "url": "https://github.com/Will-Riffe/Sustain-A-Plate/issues"
   },
-  "homepage": "https://github.com/Will-Riffe/fargo-island-cannery#readme"
+  "homepage": "https://github.com/Will-Riffe/Sustain-A-Plate#readme"
 }
