@@ -12,6 +12,6 @@
           - uses: actions/checkout@v2
           - uses: akhileshns/heroku-deploy@v3.12.11
             with:
-              heroku_api_key: ${{f828f44d-0856-421f-8514-ef0333543004}}
+              heroku_api_key: ${{794f64be-f1ae-4ae8-b983-5bc0e5c77e19}}
               heroku_app_name: "sustain-a-plate"
               heroku_email: "w_riffe@hotmail.com"
