@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Will-Riffe/Sustain-A-Plate/issues"
   },
-  "homepage": "https://github.com/Will-Riffe/Sustain-A-Plate#readme"
+  "homepage": "https://github.com/Will-Riffe/Sustain-A-Plate#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
