@@ -5,6 +5,7 @@
   "main": "./client/src/index.js",
   "scripts": {
     "start": "cd ./client/src && npm start",
+    "seed": "cd server && npm run seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
