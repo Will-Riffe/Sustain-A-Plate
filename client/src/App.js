@@ -8,14 +8,19 @@ import './App.css';
 
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('login');
+  const [accountForm, setAccountForm] = useState('login');
+  const changeAccountForm = (accountFormName) => {
+    setAccountForm(accountFormName)
+  }
   return (
     <div className="App">
       <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={ currentForm === "login" ? <Login /> : <Signup /> } />
+          <Route path="/login" element={ accountForm === "login" ? 
+            <Login accountFormSwitch={changeAccountForm} /> 
+          : <Signup accountFormSwitch={changeAccountForm}/> } />
         </Routes>
       </Router>
     </div>);

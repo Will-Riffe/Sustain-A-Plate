@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './login.css';
 
-export default function Login() {
+export default function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
 
@@ -12,7 +12,7 @@ export default function Login() {
   }
 
   return (
-    <>
+    <div className='login-form-container'>
     <form onSubmit={handleSubmit}>
       <label forhtml= "email">email</label>
       <input value={email} onChange={(e) => setEmail(e.target.value)} 
@@ -22,7 +22,7 @@ export default function Login() {
        type= 'password' placeholder='***********' id='password' name='password' />
       <button type='submit'>Log In!</button>
     </form>
-    <button>Don't have an account? Register here.</button>
-    </>
+    <button onClick={() => props.accountFormSwitch('signup')}>Don't have an account? Register here.</button>
+    </div>
   )
 }
