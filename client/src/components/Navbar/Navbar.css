@@ -1,22 +1,16 @@
 .navbar {
     width: 100%;
     height: 100px;
-    background: #90a292;
+    background: #9a9a9a;
   }
   
   .links {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    overflow: hidden;
-    max-height:0;
-    transition: max-height 0.3s ease; 
-  }
-  
-  .links.expanded {
-    max-height: 200px; /* Adjust the value as needed to show all links */
+    justify-content: center;
+    color: white;
   }
   
   .navbar a {
@@ -34,7 +28,9 @@
     justify-content: flex-end;
   }
   
-
+  .toggleButton svg {
+    font-size: 50px;
+  }
   .toggleButton button {
     margin-right: 20px;
     background-color: transparent;
@@ -58,14 +54,3 @@
     text-align: center;
   }
   
-
-
-  .centered-content {
-    flex: 1;
-    text-align: center;
-    color:white;
-  }
-
-.centered-content h3 {
-    margin: 0;
-}

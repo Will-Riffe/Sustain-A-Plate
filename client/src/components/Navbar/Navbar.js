@@ -14,13 +14,8 @@ function NavBar() {
     }, [location])
 
     return (
-    <div className="navbar">
+    <div className="navbar" id={expandNavbar ? "open" : "close"}>
 
-        {/* Centered h3 element */}
-        <div className="centered-content">
-            <h3>Sustain-A-Plate</h3>
-        </div>
-        
         {/* responsive accordian */}
         <div className="toggleButton">
             <button 
@@ -31,15 +26,14 @@ function NavBar() {
             </button>
         </div>
 
-
         {/* navbar links */}
-        <div className={`links ${expandNavbar ? "expanded" : ""}`}>
+        <div className="links">
             <Link to="/">Home</Link>
             <Link to="/profile">Profile</Link>
             <Link to="/login">Login</Link>
         </div>
 
-
+        
     </div>
     )
 }
