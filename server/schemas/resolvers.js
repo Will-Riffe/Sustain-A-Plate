@@ -31,7 +31,7 @@ const resolvers = {
   
           await newUser.save();
   
-          return { token, message: 'User registered successfully' };
+          return { message: 'User registered successfully' };
         } catch (err) {
           throw new Error('Error during user registration');
         }
