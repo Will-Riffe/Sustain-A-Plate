@@ -27,11 +27,10 @@ export default function Signup(props) {
       <label forhtml= "password">Password</label>
       <input value={password} onChange={(e) => setPass(e.target.value)} 
        type= 'password' placeholder='***********' id='password' name='password' />
-      <button type='submit'>Log In!</button>
       <label forhtml= "account-type">Account Type</label>
       <input value={acctType} onChange={(e) => setAcct(e.target.value)} 
        type= 'acctType' placeholder='Donor or Recipient?' id='acctType' name='acctType' />
-      <button type='submit'>Log In!</button>
+      <button type='submit'>Sign Up!</button>
     </form>
     <button onClick={() => props.accountFormSwitch('login')}>Already have an account? Login here.</button>
     </div>
