@@ -7,7 +7,7 @@ function Footer() {
     return (
       <footer>
         <h3><em>Follow us on Social Media</em></h3>
-            <div class="socialMedia"> 
+            <div className="socialMedia"> 
                 <GitHubIcon />
                 <SportsEsportsIcon />
             </div>
