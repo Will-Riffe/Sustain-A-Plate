@@ -1,9 +1,18 @@
+
 footer {
-    position: fixed;
-    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
-    bottom: 0;
-    width: 100%;
-    height: 5.625rem;
-    background: #373A40;
-    text-align: center;
+  background: #9a9a9a;
+  color: white;
+  bottom: 0;
+  height: auto;
+  text-align: center;
+  position: fixed;
+  padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+  width: 100%;
   }
+
+  .socialMedia svg {
+    margin: 20px;
+    font-size: 70px;
+    cursor: grabbing;
+  }
+  
