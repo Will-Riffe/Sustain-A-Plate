@@ -2,7 +2,7 @@ const User = require('../models/user');
 const FoodListing = require('../models/foodListing');
 const Transaction = require('../models/transaction');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
@@ -31,7 +31,7 @@ const resolvers = {
   
           await newUser.save();
   
-          return { message: 'User registered successfully' };
+          return { token, message: 'User registered successfully' };
         } catch (err) {
           throw new Error('Error during user registration');
         }
@@ -53,7 +53,7 @@ const resolvers = {
           }
   
           // If the password is valid, create a JWT token and return it to the client for authentication
-          const token = jwt.sign({ userId: user.id }, 'YOUR_JWT_SECRET', { expiresIn: '1h' });
+          const token = signToken(user);
   
           return { token, userId: user.id };
         } catch (err) {
