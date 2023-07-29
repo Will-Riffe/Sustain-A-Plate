@@ -1,16 +1,33 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './login.css';
+// import Auth from '../../utils/auth'
 
 export default function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
+  // const [validated] = useState(false);
+  // const [showAlert, setShowAlert] = useState(false);
 
-  const handleSubmit = (e) => {
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setUserFormData({ ...userFormData, [name]: value });
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email);
+
+    // const form = e.currentTarget;
+    // if (form.checkValidity() === false) {
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    // }
   }
 
+
+
+  
   return (
     <div className='login-form-container'>
     <form className="login-form" onSubmit={handleSubmit}>
