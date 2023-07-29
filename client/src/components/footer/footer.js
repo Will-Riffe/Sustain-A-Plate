@@ -1,10 +1,20 @@
 import React from "react";
 import './footer.css';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
-export default function Footer() {
+function Footer() {
     return (
-        <footer className="footer">
-              <h3>Follow Our Socials!</h3>
-        </footer>
-    );
-}
+      <footer>
+        <h3><em>Follow us on Social Media</em></h3>
+            <div className="socialMedia"> 
+                <GitHubIcon />
+                <SportsEsportsIcon />
+            </div>
+        <p> &copy; 2023 Sustain-A-Plate </p>
+  
+      </footer>
+    )
+  }
+  
+  export default Footer
