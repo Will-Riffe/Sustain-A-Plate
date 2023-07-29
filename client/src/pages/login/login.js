@@ -1,9 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react';
+// import ReactDOM from 'react-dom/client';
+import './login.css';
 
-function Login() {
+export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPass] = useState('');
+
+  const handleSubmit = () => {
+    e.preventDefault();
+    console.log(email);
+  }
+
   return (
-    <div>login</div>
+    <form onSubmit={handleSubmit}>
+      <label forhtml= "email">email</label>
+      <input type= 'email' placeholder='example@email.com' id='email' name='email' />
+      <label forhtml= "password">Password</label>
+      <input type= 'password' placeholder='***********' id='password' name='password' />
+      <button>Log In!</button>
+    </form>
   )
 }
-
-export default Login

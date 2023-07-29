@@ -1,9 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom/client';
+import './signup.css';
 
-function signup() {
+export default function Signup() {
   return (
-    <div>signup</div>
+    <>Signup</>
   )
 }
-
-export default signup
