@@ -13,7 +13,7 @@ export default function Login(props) {
 
   return (
     <div className='login-form-container'>
-    <form onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
       <label forhtml= "email">email</label>
       <input value={email} onChange={(e) => setEmail(e.target.value)} 
        type= 'email' placeholder='example@email.com' id='email' name='email' />
@@ -22,7 +22,7 @@ export default function Login(props) {
        type= 'password' placeholder='***********' id='password' name='password' />
       <button type='submit'>Log In!</button>
     </form>
-    <button onClick={() => props.accountFormSwitch('signup')}>Don't have an account? Register here.</button>
+    <button className="state-change-btn" onClick={() => props.accountFormSwitch('signup')}>Don't have an account? Register here.</button>
     </div>
   )
 }

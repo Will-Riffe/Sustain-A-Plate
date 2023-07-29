@@ -1,0 +1,38 @@
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+label {
+    text-align: left;
+    padding: 0.5rem 0;
+}
+
+input {
+    padding: 0.5rem 0;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    margin: .25rem 0;
+}
+
+.state-change-btn {
+    background: none;
+    text-decoration: underline;
+}

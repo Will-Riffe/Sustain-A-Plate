@@ -17,7 +17,7 @@ export default function Signup(props) {
 
   return (
     <div className='signup-form-container'>
-    <form onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
       <label forhtml= "username">Username</label>
       <input value={username} onChange={(e) => setUserName(e.target.value)} 
        type= 'username' placeholder='Username' id='username' name='username' />
@@ -32,7 +32,7 @@ export default function Signup(props) {
        type= 'acctType' placeholder='Donor or Recipient?' id='acctType' name='acctType' />
       <button type='submit'>Sign Up!</button>
     </form>
-    <button onClick={() => props.accountFormSwitch('login')}>Already have an account? Login here.</button>
+    <button className="state-change-btn" onClick={() => props.accountFormSwitch('login')}>Already have an account? Login here.</button>
     </div>
   )
 }
