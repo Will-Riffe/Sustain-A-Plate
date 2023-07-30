@@ -14,6 +14,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
 import ListIcon from '@mui/icons-material/List';
 import StoreIcon from '@mui/icons-material/Store';
+import ReorderIcon from '@mui/icons-material/Reorder';
 
 function Navbar() {
   const [state, setState] = React.useState({
@@ -40,11 +41,9 @@ function Navbar() {
           { path: '/', text: 'Home', icon: <HomeIcon /> },
           { path: '/profile', text: 'Profile', icon: <AccountCircleIcon /> },
           { path: '/login', text: 'Login', icon: <LockIcon /> },
-          { path: '/list', text: 'List', icon: <ListIcon /> },
-          { path: '/inventory', text: 'Inventory', icon: <StoreIcon /> },
         ].map((item) => (
           <ListItem key={item.text} disablePadding>
-            <ListItemButton>
+            <ListItemButton component={Link} to={item.path}>
               <ListItemIcon>
                 {item.icon}
               </ListItemIcon>
@@ -58,7 +57,11 @@ function Navbar() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Left</Button>
+      <Button onClick={toggleDrawer(true)}>
+        <Link to="/">
+          <ReorderIcon />
+        </Link>
+      </Button>
       <Drawer
         anchor="left"
         open={state.left}
@@ -66,7 +69,13 @@ function Navbar() {
       >
         {list}
       </Drawer>
+      
+      {/* Centered Logo */}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60px' }}>
+        <h3>Sustain-A-Plate</h3>
+      </div>
     </div>
   );
 }
-export default Navbar
+
+export default Navbar;
