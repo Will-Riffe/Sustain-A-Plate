@@ -24,9 +24,6 @@ export default function Login(props) {
       console.log(e);
     }
   };
-
-
-
   
   return (
     <div className='login-form-container'>

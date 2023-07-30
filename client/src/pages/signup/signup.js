@@ -1,19 +1,31 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './signup.css';
+import { useMutation } from '@apollo/client';
+import { REGISTER } from '../../utils/mutations';
 
 export default function Signup(props) {
   const [username, setUserName] = useState('')
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
-  const [acctType, setAcct] = useState('');
+  const [registerUser] = useMutation(REGISTER);
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email);
     console.log(username);
-    console.log(acctType);
-  }
+    const mutationResponse = await registerUser({
+      variables: { 
+        username: setUserName.username, 
+        email: setEmail.email, 
+        password: setPass.password
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+      };
+
 
   return (
     <div className='signup-form-container'>
@@ -27,12 +39,9 @@ export default function Signup(props) {
       <label forhtml= "password">Password</label>
       <input value={password} onChange={(e) => setPass(e.target.value)} 
        type= 'password' placeholder='***********' id='password' name='password' />
-      <label forhtml= "account-type">Account Type</label>
-      <input value={acctType} onChange={(e) => setAcct(e.target.value)} 
-       type= 'acctType' placeholder='Donor or Recipient?' id='acctType' name='acctType' />
       <button type='submit'>Sign Up!</button>
     </form>
     <button className="state-change-btn" onClick={() => props.accountFormSwitch('login')}>Already have an account? Login here.</button>
     </div>
-  )
-}
+  );
+  }
