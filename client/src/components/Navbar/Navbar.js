@@ -1,41 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from "react-router-dom";
-import ReorderIcon from "@mui/icons-material/Reorder";
-import './Navbar.css';
+import * as React from 'react';
+import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import HomeIcon from '@mui/icons-material/Home';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LockIcon from '@mui/icons-material/Lock';
+import ListIcon from '@mui/icons-material/List';
+import StoreIcon from '@mui/icons-material/Store';
 
-function NavBar() {
-    
-    const [expandNavbar, setExpandNavbar] = useState(false);
-    const location = useLocation();
+function Navbar() {
+  const [state, setState] = React.useState({
+    left: false,
+  });
 
-    {/* Here useEffect collapses accordian as user navigates pages*/}
-    useEffect(() => {
-        setExpandNavbar(false)
-    }, [location])
+  const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
 
-    return (
-    <div className="navbar" id={expandNavbar ? "open" : "close"}>
+    setState({ ...state, left: open });
+  };
 
-        {/* responsive accordian */}
-        <div className="toggleButton">
-            <button 
-                onClick={() => {
-                    setExpandNavbar((prev) => !prev);
-                }}>
-                <ReorderIcon />
-            </button>
-        </div>
+  const list = (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {[
+          { path: '/', text: 'Home', icon: <HomeIcon /> },
+          { path: '/profile', text: 'Profile', icon: <AccountCircleIcon /> },
+          { path: '/login', text: 'Login', icon: <LockIcon /> },
+          { path: '/list', text: 'List', icon: <ListIcon /> },
+          { path: '/inventory', text: 'Inventory', icon: <StoreIcon /> },
+        ].map((item) => (
+          <ListItem key={item.text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
-        {/* navbar links */}
-        <div className="links">
-            <Link to="/">Home</Link>
-            <Link to="/profile">Profile</Link>
-            <Link to="/login">Login</Link>
-        </div>
-
-                
+  return (
+    <div>
+      <Button onClick={toggleDrawer(true)}>Left</Button>
+      <Drawer
+        anchor="left"
+        open={state.left}
+        onClose={toggleDrawer(false)}
+      >
+        {list}
+      </Drawer>
     </div>
-    )
+  );
 }
-
-export default NavBar
+export default Navbar
