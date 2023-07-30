@@ -1,29 +1,29 @@
 import React, {useState} from 'react';
-import ReactDOM from 'react-dom/client';
+// import { Link } from 'react-dom/client';
 import './login.css';
-// import Auth from '../../utils/auth'
+import Auth from '../../utils/auth';
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../../utils/mutations';
 
 export default function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
-  // const [validated] = useState(false);
-  // const [showAlert, setShowAlert] = useState(false);
+  const [login, { error }] = useMutation(LOGIN);
 
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setUserFormData({ ...userFormData, [name]: value });
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email);
-
-    // const form = e.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   e.preventDefault();
-    //   e.stopPropagation();
-    // }
-  }
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
 
 
