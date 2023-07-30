@@ -1,0 +1,40 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15vh;
+  background-color: #98ff98;
+  z-index: 100; /* Add z-index to keep the navbar on top */
+}
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: var(--textColor);
+  }
+  
+  .drawer-button-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+
+  }
+  
+  .drawer-container {
+    width: auto;
+  }
+  
+  .icon-color {
+    color: var(--textColor); 
+  }

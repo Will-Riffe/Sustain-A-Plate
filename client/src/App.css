@@ -5,9 +5,10 @@
 }
 
 :root{
-  --colorOne: grey;
-  --colorTwo: rgb(66, 66, 66);
-  --textColor: White;
+  --colorOne: #98ff983b;
+  --colorTwo: #98ff987b;
+  --colorThree: #00ff00;
+  --textColor: #008080ad;
 }
 
 
