@@ -10,5 +10,5 @@
   }
   
 .home-container {
-    margin-top:15vh;
+    flex-grow: 1;
 }

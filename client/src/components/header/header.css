@@ -10,7 +10,7 @@
     padding: 0.625rem;
     background-color: #373A40;
     color:aliceblue;
-    position: relative;
+    position: sticky;
     min-width: 100%;
 }
 

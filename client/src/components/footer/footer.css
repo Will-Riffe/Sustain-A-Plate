@@ -3,10 +3,10 @@ footer {
   background: var(--colorTwo);
   color: var(--textColor);
   bottom: 0;
-  height: 25%;
+  height: 8.5rem;
   text-align: center;
   position: relative;
-  padding: 5vh;
+  padding: 1vh;
   width: 100%;
   }
 
