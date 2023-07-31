@@ -106,9 +106,7 @@ function Navbar() {
 
     <div className="drawer-button-container">
       <Button onClick={toggleDrawer(true)}>
-        <Link to="/">
           <ReorderIcon className="icon-color"/>
-        </Link>
       </Button>
       <Drawer
         anchor="left"

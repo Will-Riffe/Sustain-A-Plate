@@ -3,15 +3,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 15vh;
+  height: 10vh;
   background-color: #98ff98;
-  z-index: 100; /* Add z-index to keep the navbar on top */
 }
   
   .logo-container {
