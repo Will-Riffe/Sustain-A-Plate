@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
 import './login.css';
-import Auth from '../../utils/auth';
+import AuthService from "../../utils/auth";
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
 
 export default function Login(props) {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPass] = useState('');
-  const [login, { error }] = useMutation(LOGIN);
+  const [login] = useMutation(LOGIN);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const mutationResponse = await login({
         variables: {
           input: {
-            username: email,
+            username: username,
             password: password,
           },
         },
       });
       
       const token = mutationResponse.data.loginUser.token;  // Changed to loginUser.js
-      Auth.login(token);  // This calls the non-static method on the AuthService instance.
+      AuthService.login(token);  // This calls the non-static method on the AuthService instance.
     } catch (e) {
       console.log(e);
     }
@@ -31,14 +32,14 @@ export default function Login(props) {
   return (
     <div className='login-form-container'>
       <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="username">Username</label>
         <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type='email'
-          placeholder='example@email.com'
-          id='email'
-          name='email'
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          type='username'
+          placeholder='username'
+          id='username'
+          name='username'
         />
         <label htmlFor="password">Password</label>
         <input
