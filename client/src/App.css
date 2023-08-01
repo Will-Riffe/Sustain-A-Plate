@@ -5,10 +5,10 @@
 }
 
 :root{
-  --colorOne: #98ff9855;
-  --colorTwo: #98ff987b;
+  --colorOne: #98ff98;
+  --colorTwo: #dbfbdb;
   --colorThree: #00ff00;
-  --textColor: #008080ad;
+  --textColor: #005555;
 }
 
 
@@ -18,7 +18,7 @@
   /* height:auto; */
   display: flex;
   flex-direction: column;
-  background-color: var(--colorOne);
+  background-color: var(--colorTwo);
 }
 
 body {

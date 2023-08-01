@@ -1,14 +1,87 @@
 
 .card-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-  }
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 20px 15px 20px var(--textColor);
+  color: var(--textColor);
+}
   
+.lead-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  color: var(--textColor);
+  font-size: 30px;
+  text-align:center;
+}
+
 .home-container {
     flex-grow: 1;
+}
+
+.outfield-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lead-section .cta-button{
+  font-size:15px;
+}
+
+
+.lead-section .lead-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.lead-section .lead-text {
+  flex: 1;
+  margin-right:10%;
+}
+
+.lead-section .lead-image {
+  flex: 1;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.lead-section .lead-image img {
+  max-width: 40vw;
+  max-height: auto;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 767px) {
+  .lead-section .lead-content {
+    flex-direction: column;
+  }
+
+  .lead-section .lead-image {
+    text-align: center;
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  .lead-section .lead-image img {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 8px;
+  }
+
+  .home-container {
+    flex-direction: column;
+  }
+
+  .card-section {
+    flex: 1;
+  }
 }
