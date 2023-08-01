@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './signup.css';
-import { useMutation } from '@apollo/client';
-import { REGISTER } from '../../utils/mutations';
-import AuthService from '../../utils/auth';
+import React, { useState } from "react";
+import "./signup.css";
+import { useMutation } from "@apollo/client";
+import { REGISTER } from "../../utils/mutations";
+import AuthService from "../../utils/auth";
 
 export default function Signup(props) {
-  const [username, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPass] = useState('');
+  const [username, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPass] = useState("");
   const [registerUser] = useMutation(REGISTER);
 
   const handleSubmit = async (e) => {
@@ -15,21 +15,25 @@ export default function Signup(props) {
 
     try {
       const mutationResponse = await registerUser({
-        username: username,
-        email: email,
-        password: password,
+        variables: {
+          input: {
+            username: username,
+            email: email,
+            password: password,
+          },
+        },
       });
-      
+
       const token = mutationResponse.data.registerUser.token;
       // console.log(mutationResponse.data.registerUser.token)
       AuthService.login(token);
     } catch (e) {
-      throw new Error (e);
+      throw new Error(e);
     }
   };
 
   return (
-    <div className='signup-form-container'>
+    <div className="signup-form-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
         <input
@@ -62,7 +66,7 @@ export default function Signup(props) {
       </form>
       <button
         className="state-change-btn"
-        onClick={() => props.accountFormSwitch('login')}
+        onClick={() => props.accountFormSwitch("login")}
       >
         Already have an account? Login here.
       </button>
