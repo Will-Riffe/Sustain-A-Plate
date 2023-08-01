@@ -1,24 +1,26 @@
+/* header.css */
 * {
     box-sizing: border-box;
     padding-bottom: 0.063rem;
     margin: 0;
     min-width: fit-content;
     height: auto;
-}
-
-.header {
-    padding: 0.625rem;
+  }
+  
+  .header {
+    padding: 1rem;
     background-color: #373A40;
-    color:aliceblue;
+    color: aliceblue;
     position: sticky;
-    min-width: 100%;
-}
-
-h1 {
-    display: inline-block;
-    font-size: 4rem;
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    padding-top: 2.5rem;
-}
+    top: 0;
+    z-index: 999;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  

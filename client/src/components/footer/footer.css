@@ -1,4 +1,4 @@
-
+/* footer.css */
 footer {
   background: var(--colorOne);
   color: var(--textColor);
@@ -6,16 +6,15 @@ footer {
   height: 8.5rem;
   text-align: center;
   position: relative;
-  padding: 1vh;
   width: 100%;
-  }
+}
 
-  .socialMedia svg {
-    margin: 1rem;
-    font-size: auto;
-    cursor: grabbing;
-  }
-  
-  body {
-    margin-bottom: 25%;
-  }
+.socialMedia svg {
+  margin: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}

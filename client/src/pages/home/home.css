@@ -1,3 +1,11 @@
+/* home.css */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
 
 .card-section {
   flex: 0 0 calc(33.33% - 20px);

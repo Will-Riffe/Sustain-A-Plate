@@ -1,38 +1,40 @@
+/* Navbar Container */
 .navbar-container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 1rem;
-  padding-bottom: .5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 10%;
   background-color: var(--colorOne);
 }
-  
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    color: var(--textColor);
-  }
-  
-  .drawer-button-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
 
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Sustain-A-Plate Heading */
+h3 {
+  font-size: 2.5rem; 
+  color: #FFFFFF; 
+  margin: 0;
+}
+
+/* Drawer Button Container */
+.drawer-button-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Icon Color */
+.icon-color {
+  color:#FFFFFF; 
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .drawer-button-container {
+    padding-right: 0.5rem;
   }
-  
-  .drawer-container {
-    width: auto;
-  }
-  
-  .icon-color {
-    color: var(--textColor); 
-  }
+}

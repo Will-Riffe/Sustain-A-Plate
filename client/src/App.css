@@ -1,3 +1,4 @@
+/* App.css */
 * {
   padding: 0;
   margin: 0; 
@@ -24,5 +25,19 @@
 body {
   padding: 0;
   margin: 0;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colorOne);
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 4rem; 
 }
 

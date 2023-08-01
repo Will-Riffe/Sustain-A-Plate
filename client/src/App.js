@@ -14,10 +14,9 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { endpoint } from "./config";
 
 const httpLink = createHttpLink({
-  uri: endpoint,
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -45,20 +44,22 @@ function App() {
       <ApolloProvider client={client}>
         <Router>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route
-              path="/login"
-              element={
-                accountForm === "login" ? (
-                  <Login accountFormSwitch={changeAccountForm} />
-                ) : (
-                  <Signup accountFormSwitch={changeAccountForm} />
-                )
-              }
-            />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route
+                path="/login"
+                element={
+                  accountForm === "login" ? (
+                    <Login accountFormSwitch={changeAccountForm} />
+                  ) : (
+                    <Signup accountFormSwitch={changeAccountForm} />
+                  )
+                }
+              />
+            </Routes>
+          </div>
           <Footer />
         </Router>
       </ApolloProvider>
