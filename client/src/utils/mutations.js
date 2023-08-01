@@ -10,7 +10,7 @@ export const LOGIN = gql`
 `;
 
 export const REGISTER = gql`
-  mutation registerUser($input: RegisterInput!) {
+  mutation RegisterUser($input: RegisterInput!) {
     registerUser(input: $input) {
       token
     }
