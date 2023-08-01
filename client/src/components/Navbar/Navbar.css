@@ -16,8 +16,8 @@
 
 /* Sustain-A-Plate Heading */
 h3 {
-  font-size: 2.5rem; 
-  color: #FFFFFF; 
+  font-size: 2.0rem; 
+  color: var(--textColor); 
   margin: 0;
 }
 
@@ -29,7 +29,7 @@ h3 {
 
 /* Icon Color */
 .icon-color {
-  color:#FFFFFF; 
+  color:var(--textColor); 
 }
 
 /* Media Query for Mobile Devices */
