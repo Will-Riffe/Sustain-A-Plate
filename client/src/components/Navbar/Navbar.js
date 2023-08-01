@@ -46,7 +46,7 @@ function Navbar() {
 
   const list = (
     <Box
-      sx={{ width: 250, 
+      sx={{ width: 165, 
             backgroundColor: "var(--colorOne)", 
             color: "var(--textColor)",
             height: "100%"

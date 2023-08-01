@@ -2,11 +2,11 @@ import React from 'react';
 import './header.css';
 
 export default function Header() {
-    return (
+  return (
     <header className="header">
-      <div >
+      <div>
         <h1>Sustain-A-Plate</h1>
       </div>
     </header>
-    );
+  );
 }

@@ -45,20 +45,22 @@ function App() {
       <ApolloProvider client={client}>
         <Router>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route
-              path="/login"
-              element={
-                accountForm === "login" ? (
-                  <Login accountFormSwitch={changeAccountForm} />
-                ) : (
-                  <Signup accountFormSwitch={changeAccountForm} />
-                )
-              }
-            />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route
+                path="/login"
+                element={
+                  accountForm === "login" ? (
+                    <Login accountFormSwitch={changeAccountForm} />
+                  ) : (
+                    <Signup accountFormSwitch={changeAccountForm} />
+                  )
+                }
+              />
+            </Routes>
+          </div>
           <Footer />
         </Router>
       </ApolloProvider>

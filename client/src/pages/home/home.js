@@ -24,12 +24,11 @@ const HomePage = () => {
         </p>
       </section>
 
-
       {/* Partner with Us section */}
       <section className="card-section">
         <h2>Partner with Us for Sustainable Growth</h2>
         <p>
-          Businesses partnering with us reduce food waste, increase revenue, and contribute to a more sustainable future.
+          By partnering with us, your business can reduce food waste, increase revenue, and contribute to a more sustainable future.
           Every portion saved is one less wasted portion and one more step toward a better bottom line.
         </p>
         <Link to="/sustainability" className="cta-button">Get Started</Link>
@@ -38,15 +37,18 @@ const HomePage = () => {
       {/* Zero-food-waste communities section */}
       <section className="card-section">
         <h2>Transforming Communities through Zero Food Waste</h2>
-        <p>We are committed to making zero food waste a reality. Our focus is on making sustainable eating the most convenient way to eat, benefiting both people and the planet.</p>
+        <p>
+          We are committed to making zero food waste a reality. Our focus is on making sustainable eating the most convenient way to eat, benefiting both people and the planet.
+        </p>
         <Link to="/sustainability" className="cta-button">Learn More</Link>
       </section>
-
 
       {/* What We Do section */}
       <section className="card-section">
         <h2>Connecting Surplus Food to Those in Need</h2>
-        <p>We connect businesses that have surplus food with charities and community groups to ensure no food goes to waste, benefiting those who need it most.</p>
+        <p>
+          We connect businesses that have surplus food with charities and community groups to ensure no food goes to waste, benefiting those who need it most.
+        </p>
       </section>
     </div>
   );

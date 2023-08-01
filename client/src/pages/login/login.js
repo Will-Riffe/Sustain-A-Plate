@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-// import { Link } from 'react-dom/client';
+import React, { useState } from 'react';
 import './login.css';
 import Auth from '../../utils/auth';
 import { useMutation } from '@apollo/client';
@@ -10,33 +9,51 @@ export default function Login(props) {
   const [password, setPass] = useState('');
   const [login, { error }] = useMutation(LOGIN);
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
     try {
       const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
+        variables: {
+          input: {
+            username: email,
+            password: password,
+          },
+        },
       });
-      const token = mutationResponse.data.login.token;
+      
+      const token = mutationResponse.data.loginUser.token;  // Changed to loginUser.js
       Auth.login(token);
     } catch (e) {
       console.log(e);
     }
   };
-  
+
   return (
     <div className='login-form-container'>
-    <form className="login-form" onSubmit={handleSubmit}>
-      <label forhtml= "email">email</label>
-      <input value={email} onChange={(e) => setEmail(e.target.value)} 
-       type= 'email' placeholder='example@email.com' id='email' name='email' />
-      <label forhtml= "password">Password</label>
-      <input value={password} onChange={(e) => setPass(e.target.value)} 
-       type= 'password' placeholder='***********' id='password' name='password' />
-      <button type='submit'>Log In!</button>
-    </form>
-    <button className="state-change-btn" onClick={() => props.accountFormSwitch('signup')}>Don't have an account? Register here.</button>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label htmlFor="email">Email</label>
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type='email'
+          placeholder='example@email.com'
+          id='email'
+          name='email'
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          value={password}
+          onChange={(e) => setPass(e.target.value)}
+          type='password'
+          placeholder='***********'
+          id='password'
+          name='password'
+        />
+        <button type='submit'>Log In!</button>
+      </form>
+      <button className="state-change-btn" onClick={() => props.accountFormSwitch('signup')}>
+        Don't have an account? Register here.
+      </button>
     </div>
-  )
+  );
 }

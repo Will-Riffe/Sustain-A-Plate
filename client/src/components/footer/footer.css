@@ -1,21 +1,19 @@
-
+/* footer.css */
 footer {
-  background: var(--colorTwo);
-  color: var(--textColor);
-  bottom: 0;
-  height: 8.5rem;
+  background: #373A40;
+  color: white;
+  padding: 2rem;
   text-align: center;
   position: relative;
-  padding: 1vh;
   width: 100%;
-  }
+}
 
-  .socialMedia svg {
-    margin: 1rem;
-    font-size: auto;
-    cursor: grabbing;
-  }
-  
-  body {
-    margin-bottom: 25%;
-  }
+.socialMedia svg {
+  margin: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}

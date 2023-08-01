@@ -1,28 +1,33 @@
+/* App.css */
 * {
   padding: 0;
   margin: 0; 
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --colorOne: #98ff9855;
   --colorTwo: #98ff987b;
   --colorThree: #00ff00;
   --textColor: #008080ad;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
 
 .App {
   width: 100%;
   min-height: 100vh;
-  /* height:auto; */
   display: flex;
   flex-direction: column;
   background-color: var(--colorOne);
 }
 
-body {
-  padding: 0;
-  margin: 0;
+.content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 4rem; 
 }
 
