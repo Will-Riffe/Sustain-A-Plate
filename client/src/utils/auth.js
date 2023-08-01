@@ -25,7 +25,7 @@ class AuthService {
         return localStorage.getItem('id_token');
     }
 
-    login(idToken) {
+    static login(idToken) {
         localStorage.setItem('id_token', idToken);
         window.location.assign('/');
     }
@@ -36,4 +36,4 @@ class AuthService {
     }
 }
 
-export default new AuthService();
+export default AuthService;

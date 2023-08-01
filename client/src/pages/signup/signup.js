@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './signup.css';
 import { useMutation } from '@apollo/client';
 import { REGISTER } from '../../utils/mutations';
-import Auth from '../../utils/auth';
+import AuthService from '../../utils/auth';
 
 export default function Signup(props) {
   const [username, setUserName] = useState('');
@@ -15,19 +15,16 @@ export default function Signup(props) {
 
     try {
       const mutationResponse = await registerUser({
-        variables: {
-          input: {
-            username: username,
-            email: email,
-            password: password,
-          },
-        },
+        username: username,
+        email: email,
+        password: password,
       });
       
-      const token = mutationResponse.data.data.registerUser.token;
-      Auth.login(token);
+      const token = mutationResponse.data.registerUser.token;
+      // console.log(mutationResponse.data.registerUser.token)
+      AuthService.login(token);
     } catch (e) {
-      console.log(e);
+      throw new Error (e);
     }
   };
 

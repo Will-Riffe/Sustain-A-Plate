@@ -14,10 +14,9 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { endpoint } from "./config";
 
 const httpLink = createHttpLink({
-  uri: endpoint,
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {

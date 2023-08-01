@@ -8,7 +8,7 @@ const { authMiddleware } = require("./utils/auth");
 // Connect to MongoDB using connection.js
 require("./config/connection");
 // Import user routes from userRoutes.js
-const userRoutes = require("./utils/userRoutes");
+// const userRoutes = require("./utils/userRoutes");
 const { typeDefs, resolvers } = require("./schemas"); // Updated the import path
 const db = require("./config/connection");
 
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 // Parse JSON in request bodies
 app.use(express.json());
 
-app.use(userRoutes);
+// app.use(userRoutes);
 
 // This function will start the ApolloServer and apply middleware.
 async function startServer() {

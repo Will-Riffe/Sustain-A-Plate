@@ -13,7 +13,6 @@ export const REGISTER = gql`
   mutation registerUser($input: RegisterInput!) {
     registerUser(input: $input) {
       token
-      userId
     }
   }
 `;
