@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
+import Logout from "./pages/logout/logout"; // Import the logout component
 import Profile from "./pages/profile/profile";
 import Footer from "./components/footer/footer";
 import Navbar from "./components/Navbar/Navbar";
@@ -58,6 +59,7 @@ function App() {
                   )
                 }
               />
+              <Route path="/logout" element={<Logout />} /> {/* Add a route for logout */}
             </Routes>
           </div>
           <Footer />

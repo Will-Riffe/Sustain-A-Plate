@@ -22,7 +22,7 @@ export default function Login(props) {
       });
       
       const token = mutationResponse.data.loginUser.token;  // Changed to loginUser.js
-      Auth.login(token);
+      Auth.login(token);  // This calls the non-static method on the AuthService instance.
     } catch (e) {
       console.log(e);
     }
