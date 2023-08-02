@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react';
+// import transHistory from '../../components/transactions';
+import PROFILEPICS from '../../assets/profile-templates/profilepics';
+import ProfileCards from '../../components/profileCards/profileCards';
 
-function Profile() {
+export default function Profile() {
+  const [profile] = useState([
+    {
+      title: 'Browse Stores',
+      image: PROFILEPICS.Browse,
+      link: '/food'
+    },
+    {
+      title: 'Transaction History',
+      image: PROFILEPICS.PreviousTransactions,
+      link: '/list'
+    }
+  ])
   return (
-    <div>Profile Page</div>
+    <section className='profile-space'>
+      <div className='profileCard-sections'>
+        {profile.map((profilecard, index) => (
+          <ProfileCards key={index} {...profilecard} />
+        ))}
+      </div>
+    </section>
   )
 }
-
-export default Profile;
