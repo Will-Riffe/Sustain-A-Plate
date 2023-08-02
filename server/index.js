@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const { ApolloServer } = require("apollo-server-express");
+const path = require('path');
 
 // import jwt authentication middleware
 const { authMiddleware } = require("./utils/auth");
