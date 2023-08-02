@@ -3,18 +3,24 @@ footer {
   background: var(--colorOne);
   color: var(--textColor);
   bottom: 0;
-  height: 8.5rem;
-  text-align: center;
+  height: 100%;
   position: relative;
   width: 100%;
+  text-align: center;
+}
+
+footer h3{
+  font-size:large;
 }
 
 .socialMedia svg {
   margin: 0.5rem;
   font-size: 2rem;
   cursor: pointer;
+  font-weight:bolder;
 }
 
 p {
   margin: 0;
+  font-weight:800;
 }
