@@ -1,0 +1,14 @@
+.restaurant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.restaurantCard-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vh 10vw;
+    padding-top: 2rem;
+}

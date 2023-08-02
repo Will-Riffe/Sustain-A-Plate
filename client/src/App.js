@@ -7,6 +7,7 @@ import Logout from "./pages/logout/logout"; // Import the logout component
 import Profile from "./pages/profile/profile";
 import Footer from "./components/footer/footer";
 import Navbar from "./components/Navbar/Navbar";
+import Restaurants from "./pages/restaurants/restaurants";
 import "./App.css";
 import {
   ApolloClient,
@@ -49,6 +50,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/food" element={<Restaurants />} />
               <Route
                 path="/login"
                 element={

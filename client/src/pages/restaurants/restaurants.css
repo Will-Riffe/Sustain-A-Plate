@@ -1,0 +1,6 @@
+.restaurantCard-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4vh 10vw;
+    padding-top: 2rem;
+}
