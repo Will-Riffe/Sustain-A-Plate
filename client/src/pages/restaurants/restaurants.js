@@ -8,32 +8,32 @@ export default function Restaurants() {
     {
       title: "Berts Cafe",
       image: RESTAURANTPICS.LocalCafe,
-      link: "/",
+      link: "/donorInventory",
     },
     {
       title: "ShopRite",
       image: RESTAURANTPICS.Shoprite,
-      link: "/",
+      link: "/donorInventory",
     },
     {
       title: "Panera",
       image: RESTAURANTPICS.Panera,
-      link: "/",
+      link: "/donorInventory",
     },
     {
       title: "Dunkin Donuts",
       image: RESTAURANTPICS.DunkinDonuts,
-      link: "/",
+      link: "/donorInventory",
     },
     {
       title: "Wegmans",
       image: RESTAURANTPICS.Wegmans,
-      link: "/",
+      link: "/donorInventory",
     },
     {
       title: "McArthur Pub",
       image: RESTAURANTPICS.LocalRestaurant,
-      link: "/",
+      link: "/donorInventory",
     },
   ]);
   return (
