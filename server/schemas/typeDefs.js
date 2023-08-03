@@ -1,3 +1,5 @@
+// schemas.js
+
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -44,6 +46,23 @@ const typeDefs = gql`
     password: String
   }
 
+  input CreateFoodListingInput {
+    donorId: ID!
+    foodItem: String!
+    description: String!
+    expiryDate: String!
+    quantity: Int!
+  }
+
+  input UpdateFoodListingInput {
+    id: ID!
+    foodItem: String
+    description: String
+    expiryDate: String
+    quantity: Int
+    isClaimed: Boolean
+  }
+
   type AuthData {
     token: String!
     userId: ID!
@@ -53,12 +72,16 @@ const typeDefs = gql`
     users: [User]
     foodListings: [FoodListing]
     transactions: [Transaction]
+    foodListing(id: ID!): FoodListing
   }
 
   type Mutation {
     registerUser(input: RegisterInput): AuthData
     loginUser(input: LoginInput): AuthData
     updateUser(input: UpdateUserInput): User
+    createFoodListing(input: CreateFoodListingInput): FoodListing
+    updateFoodListing(input: UpdateFoodListingInput): FoodListing
+    deleteFoodListing(id: ID!): FoodListing
   }
 `;
 
