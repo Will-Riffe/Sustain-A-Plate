@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PROFILEPICS from '../../assets/profile-templates/profilepics';
 import ProfileCards from '../../components/profileCards/profileCards';
 
+
 export default function Profile() {
   const [profile] = useState([
     {

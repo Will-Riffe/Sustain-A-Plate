@@ -46,7 +46,7 @@ function Navbar() {
 
   const list = (
     <Box
-      sx={{ width: 165, 
+      sx={{ width: 175, 
             backgroundColor: "var(--colorOne)", 
             color: "var(--textColor)",
             height: "100%"
@@ -80,6 +80,7 @@ function Navbar() {
             { path: '/profile', text: 'Profile', icon: <AccountCircleIcon className="icon-color" /> },
             { path: '/food', text: 'Food Recovery', icon: <AddShoppingCartIcon className="icon-color" /> },
             { path: '/list', text: 'Recovery History', icon: <MenuBookIcon className="icon-color"/> },
+            { path: '/sustainability', text: 'Sustainability', icon: <MenuBookIcon className="icon-color"/> }, // Added the Sustainability Tips
           ].map((item) => (
             <ListItem key={item.text} disablePadding>
               <ListItemButton component={Link} to={item.path}>
@@ -95,28 +96,26 @@ function Navbar() {
     </Box>
   );
 
-  
   return (
-   <div className="navbar-container">
-
+    <div className="navbar-container">
       {/* Centered Logo */}
       <div className="logo-container">
         <h3>Sustain-A-Plate</h3>
       </div>
 
-    <div className="drawer-button-container">
-      <Button onClick={toggleDrawer(true)}>
+      <div className="drawer-button-container">
+        <Button onClick={toggleDrawer(true)}>
           <ReorderIcon className="icon-color"/>
-      </Button>
-      <Drawer
-        anchor="left"
-        open={state.navToggle}
-        onClose={toggleDrawer(false)}
-      >
-        {list}
-      </Drawer>
-    </div>
-  </div> 
+        </Button>
+        <Drawer
+          anchor="left"
+          open={state.navToggle}
+          onClose={toggleDrawer(false)}
+        >
+          {list}
+        </Drawer>
+      </div>
+    </div> 
   );
 }
 

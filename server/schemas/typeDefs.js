@@ -5,6 +5,7 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
+    password: String!
   }
 
   type FoodListing {
@@ -36,19 +37,28 @@ const typeDefs = gql`
     password: String!
   }
 
+  input UpdateUserInput {
+    id: ID!
+    username: String
+    email: String
+    password: String
+  }
+
   type AuthData {
     token: String!
     userId: ID!
   }
 
   type Query {
-    _: Boolean    # Placeholder field
+    users: [User]
+    foodListings: [FoodListing]
+    transactions: [Transaction]
   }
 
   type Mutation {
     registerUser(input: RegisterInput): AuthData
     loginUser(input: LoginInput): AuthData
-    _: Boolean    # Placeholder field
+    updateUser(input: UpdateUserInput): User
   }
 `;
 

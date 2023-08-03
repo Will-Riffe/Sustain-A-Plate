@@ -1,0 +1,25 @@
+.sustainability-tip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+p.sus{
+    width: 50%;
+    height:auto;
+    text-align:end;
+    font-weight: 300;
+}
+
+.tip-image {
+  width: 50%;
+  height: auto;
+  margin: 0 10px;
+}
+
+.right {
+    flex-direction:row-reverse;
+}
+
+
