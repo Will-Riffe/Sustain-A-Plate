@@ -1,17 +1,16 @@
 // seedDB.js
 
 const mongoose = require("mongoose");
-const User = require("./models/user");
-const FoodListing = require("./models/foodListing");
-const Transaction = require("./models/transaction");
+const User = require("../models/user");
+const FoodListing = require("../models/foodListing");
+const Transaction = require("../models/transaction");
 const bcrypt = require("bcryptjs");
 
-const db = "your mongodb url here";
+const db = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/sustainaplate";
 
 mongoose.connect(db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
 });
 
 async function seedDB() {
@@ -32,7 +31,7 @@ async function seedDB() {
 
   const foodListings = [
     {
-      donorId: "userID of donor",
+      donorId: "61d634706a98a61edd42bf45",
       foodItem: "Apples",
       description: "A bag of apples",
       expiryDate: new Date(),
@@ -42,9 +41,9 @@ async function seedDB() {
 
   const transactions = [
     {
-      donorId: "userID of donor",
-      recipientId: "userID of recipient",
-      foodItemId: "foodID of food item",
+      donorId: "61d634706a98a61edd42bf45",
+      recipientId: "61d634706a98a61edd42bf45",
+      foodItemId: "61d634706a98a61edd42bf45",
     },
   ];
 
