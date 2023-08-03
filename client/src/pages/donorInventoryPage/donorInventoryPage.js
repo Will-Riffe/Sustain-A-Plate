@@ -1,9 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import Orders from '../../components/donorTable/donorTable';
 
 function donorInventoryPage(props) {
   return (
-    <div>donorInventoryPage</div>
+    <div>
+      <Orders/>
+    </div>
   )
 }
 
