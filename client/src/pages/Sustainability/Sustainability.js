@@ -31,7 +31,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip">
             <img src={tipOne} alt="Tip 2" className="tip-image" />
-            <p className="sus">
+            <p className="fus">
               <strong>Buy Local, Buy Seasonal</strong><br /> Support local farmers and reduce the carbon footprint of your meals by choosing foods that are in season and locally produced.
             </p>
           </div>
@@ -47,7 +47,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipFour} alt="Tip 4" className="tip-image" />
-            <p className="sus">
+            <p className="fus">
             <strong>Reusable Containers & Utensils</strong><br /> Say no to single-use plastics by using reusable containers and utensils for your meals and snacks.
             </p>
           </div>
@@ -63,7 +63,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipSix} alt="Tip 6" className="tip-image" />
-            <p className="sus">
+            <p className="fus">
             <strong>Support Sustainable Fishing</strong><br /> Choose seafood from sustainable sources to protect marine ecosystems and fish populations.
             </p>
           </div>
@@ -79,7 +79,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipEight} alt="Tip 8" className="tip-image" />
-            <p className="sus">
+            <p className="fus">
             <strong>Shop Smart</strong><br /> Be a conscious consumer by supporting brands and products that prioritize sustainability and eco-friendly practices.
             </p>
           </div>
@@ -95,7 +95,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipTen} alt="Tip 10" className="tip-image" />
-            <p className="sus">
+            <p className="fus">
               <strong>Advocate for Change</strong><br /> Get involved in local initiatives and advocate for policies that promote sustainable food systems and reduce food waste.
             </p>
           </div>

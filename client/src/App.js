@@ -9,7 +9,7 @@ import Footer from "./components/footer/footer";
 import Navbar from "./components/Navbar/Navbar";
 import Restaurants from "./pages/restaurants/restaurants";
 import Sustainability from "./pages/Sustainability/Sustainability"; // Imported the Sustainability component
-//import donorInventory from './pages/donorInventory/donorInventory';
+import Contact from './pages/contact/contact';
 import "./App.css";
 import {
   ApolloClient,
@@ -64,7 +64,7 @@ function App() {
                 }
               />
               <Route path="/logout" element={<Logout />} />
-              <Route path="/donorInventory" element={<donorInventory />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/Sustainability" element={<Sustainability />} /> {/* Added a route for Sustainability */}
             </Routes>
           </div>

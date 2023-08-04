@@ -12,6 +12,13 @@ p.sus{
     font-weight: 300;
 }
 
+p.fus{
+  width: 50%;
+  height:auto;
+  text-align:start;
+  font-weight: 300;
+}
+
 .tip-image {
   width: 50%;
   height: auto;
