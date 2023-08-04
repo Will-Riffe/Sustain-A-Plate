@@ -1,8 +1,8 @@
 /* Navbar Container */
 .navbar-container {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: center;
   height: 10%;
   background-color: var(--colorOne);
 }
@@ -16,9 +16,10 @@
 
 /* Sustain-A-Plate Heading */
 h3 {
-  font-size: 2.0rem; 
-  color: var(--textColor); 
-  margin: 0;
+  font-size: 1.5rem;
+  color: var(--textColor);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Drawer Button Container */
@@ -36,5 +37,13 @@ h3 {
 @media (max-width: 768px) {
   .drawer-button-container {
     padding-right: 0.5rem;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 10%;
+    background-color: var(--colorOne);
   }
 }
