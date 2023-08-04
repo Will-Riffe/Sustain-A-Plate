@@ -66,6 +66,18 @@ export default function Restaurants() {
           </RestaurantCards>
         ))}
       </div>
+      <style jsx>{`
+        h3 {
+          font-size: 1.5rem;
+          color: var(--textColor);
+        }
+        
+        img {
+          width: 15vw;
+          height: auto;
+          margin-top:5vh;
+        }
+      `}</style>
     </section>
   );
 }

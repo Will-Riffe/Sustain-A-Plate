@@ -11,8 +11,8 @@ const HomePage = () => {
       <section className="lead-section">
         <div className="lead-content">
           <div className="lead-text">
-            <h1 className="LargeH">
-              <em>Turn Waste into Wonder!</em>
+            <h1>
+              <em>Turn <u>Waste</u> into <u>Wonder</u>!</em>
             </h1>
             <p>
               Join the Movement for Sustainable Food!

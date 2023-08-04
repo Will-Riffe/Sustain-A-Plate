@@ -1,4 +1,9 @@
-.profileCard-sections {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.lead-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--textColor);
+    font-size: 2rem;
+    text-align: center;
 }
+

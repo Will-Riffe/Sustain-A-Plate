@@ -14,13 +14,20 @@
   flex: 1;
 }
 
-/* Sustain-A-Plate Heading */
-h3 {
-  font-size: 1.5rem;
-  color: var(--textColor);
-  margin-left: auto;
+div .logo-container a {
+  margin-left: 37vw;
   margin-right: auto;
+  text-decoration: none;
 }
+
+/* Sustain-A-Plate Heading */
+a h3 {
+  font-size: 2rem;
+  color: var(--textColor);
+  font-weight:bold;
+}
+
+
 
 /* Drawer Button Container */
 .drawer-button-container {

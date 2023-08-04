@@ -1,23 +1,23 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import './Navbar.css';
+import "./Navbar.css";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from '@mui/material/Divider';
+import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import QuizIcon from '@mui/icons-material/Quiz';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
+import QuizIcon from "@mui/icons-material/Quiz";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
 import LockIcon from "@mui/icons-material/Lock";
-import ListIcon from '@mui/icons-material/List'; 
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ListIcon from "@mui/icons-material/List";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ReorderIcon from "@mui/icons-material/Reorder";
 
 function Navbar() {
@@ -46,10 +46,11 @@ function Navbar() {
 
   const list = (
     <Box
-      sx={{ width: 175, 
-            backgroundColor: "var(--colorOne)", 
-            color: "var(--textColor)",
-            height: "100%"
+      sx={{
+        width: 175,
+        backgroundColor: "var(--colorOne)",
+        color: "var(--textColor)",
+        height: "100%",
       }}
       role="presentation"
       onClick={toggleDrawer(false)}
@@ -58,15 +59,25 @@ function Navbar() {
     >
       <List>
         {[
-          { path: '/', text: 'Home', icon: <HomeIcon className="icon-color"/> },
-          { path: '/login', text: 'Login || Sign-up', icon: <LockOpenIcon className="icon-color" /> },
-          { path: '/logout', text: 'Logout', icon: <LockIcon className="icon-color" /> },
+          {
+            path: "/",
+            text: "Home",
+            icon: <HomeIcon className="icon-color" />,
+          },
+          {
+            path: "/login",
+            text: "Login || Sign-up",
+            icon: <LockOpenIcon className="icon-color" />,
+          },
+          {
+            path: "/logout",
+            text: "Logout",
+            icon: <LockIcon className="icon-color" />,
+          },
         ].map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton component={Link} to={item.path}>
-              <ListItemIcon>
-                {item.icon}
-              </ListItemIcon>
+              <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
@@ -77,16 +88,30 @@ function Navbar() {
       {signInState && (
         <List>
           {[
-            { path: '/profile', text: 'Profile', icon: <AccountCircleIcon className="icon-color" /> },
-            { path: '/food', text: 'Food Recovery', icon: <AddShoppingCartIcon className="icon-color" /> },
-            { path: '/list', text: 'Recovery History', icon: <MenuBookIcon className="icon-color"/> },
-            { path: '/sustainability', text: 'Sustainability', icon: <MenuBookIcon className="icon-color"/> }, // Added the Sustainability Tips
+            {
+              path: "/profile",
+              text: "Profile",
+              icon: <AccountCircleIcon className="icon-color" />,
+            },
+            {
+              path: "/food",
+              text: "Food Recovery",
+              icon: <AddShoppingCartIcon className="icon-color" />,
+            },
+            {
+              path: "/list",
+              text: "Recovery History",
+              icon: <MenuBookIcon className="icon-color" />,
+            },
+            {
+              path: "/sustainability",
+              text: "Sustainability",
+              icon: <MenuBookIcon className="icon-color" />,
+            }, // Added the Sustainability Tips
           ].map((item) => (
             <ListItem key={item.text} disablePadding>
               <ListItemButton component={Link} to={item.path}>
-                <ListItemIcon>
-                  {item.icon}
-                </ListItemIcon>
+                <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
               </ListItemButton>
             </ListItem>
@@ -100,12 +125,14 @@ function Navbar() {
     <div className="navbar-container">
       {/* Centered Logo */}
       <div className="logo-container">
-        <h3>Sustain-A-Plate</h3>
+        <a href="/">
+          <h3>Sustain-A-Plate</h3>
+        </a>
       </div>
 
       <div className="drawer-button-container">
         <Button onClick={toggleDrawer(true)}>
-          <ReorderIcon className="icon-color"/>
+          <ReorderIcon className="icon-color" />
         </Button>
         <Drawer
           anchor="left"
@@ -115,7 +142,7 @@ function Navbar() {
           {list}
         </Drawer>
       </div>
-    </div> 
+    </div>
   );
 }
 

@@ -71,9 +71,15 @@ function App() {
               <Route path="/donorInventory" element={<DonorInventory />} />
             </Routes>
           </div>
-          <Footer />
+          <RestaurantCards /> {/* Move the RestaurantCards component inside the <Routes> */}
+          <Footer /> 
+          {/*
+                Sacred Space.
+                Avoid violating the space
+                under the footer unless
+                absolutely necessary
+              */}
         </Router>
-        <RestaurantCards /> {/* Move the RestaurantCards component inside the <Routes> */}
       </ApolloProvider>
     </div>
   );
