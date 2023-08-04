@@ -12,7 +12,7 @@ import Sustainability from "./pages/Sustainability/Sustainability"; // Imported 
 import Contact from './pages/contact/contact';
 import RestaurantCards from "./components/restaurantCard/restaurantCards"; 
 import DonorInventory from "./pages/donorInventory/donorInventory"; // Update the import path based on the actual location of donorInventory.js
-
+import "./App.css"; //DO NOT DELETE ;P
 import {
   ApolloClient,
   createHttpLink,
