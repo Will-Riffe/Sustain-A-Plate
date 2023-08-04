@@ -1,18 +1,18 @@
-const User = require("../models/user");
-const FoodListing = require("../models/foodListing");
-const Transaction = require("../models/transaction");
-const bcrypt = require("bcryptjs");
-const { signToken } = require("../utils/auth");
+const User = require('../models/user');
+const FoodListing = require('../models/foodListing');
+const Transaction = require('../models/transaction');
+const bcrypt = require('bcryptjs');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    users: () => User.find(),
-    foodListings: () => FoodListing.find(),
-    transactions: () => Transaction.find(),
+    users: async () => User.find(),
+    foodListings: async () => FoodListing.find(),
+    transactions: async () => Transaction.find(),
+    foodListing: async (_, { id }) => FoodListing.findById(id),
   },
   Mutation: {
     registerUser: async (_, { input }) => {
-      console.log(input)
       const { username, email, password } = input;
       
       const existingUser = await User.findOne({
@@ -60,6 +60,44 @@ const resolvers = {
         { username, email, password },
         { new: true }
       );
+    },
+    createFoodListing: async (_, { input }) => {
+      const { donorId, foodItem, description, expiryDate, quantity } = input;
+
+      const newFoodListing = new FoodListing({
+        donorId,
+        foodItem,
+        description,
+        expiryDate,
+        quantity,
+        isClaimed: false,
+      });
+
+      await newFoodListing.save();
+      return newFoodListing;
+    },
+
+    updateFoodListing: async (_, { input }) => {
+      const { id, foodItem, description, expiryDate, quantity, isClaimed } = input;
+
+      const updatedFoodListing = await FoodListing.findByIdAndUpdate(
+        id,
+        {
+          foodItem,
+          description,
+          expiryDate,
+          quantity,
+          isClaimed,
+        },
+        { new: true }
+      );
+
+      return updatedFoodListing;
+    },
+
+    deleteFoodListing: async (_, { id }) => {
+      const deletedFoodListing = await FoodListing.findByIdAndDelete(id);
+      return deletedFoodListing;
     },
   },
 };
