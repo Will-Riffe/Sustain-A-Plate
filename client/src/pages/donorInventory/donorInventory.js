@@ -1,3 +1,4 @@
+// donorInventory.js
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -7,7 +8,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-
+// Define the createData function to generate row data
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
 
 const rows = [
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
@@ -17,7 +21,7 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-function donerInventory() {
+function DonorInventory() { // Fix the function name to start with a capital letter
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -50,4 +54,5 @@ function donerInventory() {
     </TableContainer>
   );
 }
-export default donerInventory;
+
+export default DonorInventory; // Fix the export name to start with a capital letter

@@ -10,7 +10,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Restaurants from "./pages/restaurants/restaurants";
 import Sustainability from "./pages/Sustainability/Sustainability"; // Imported the Sustainability component
 import Contact from './pages/contact/contact';
-import "./App.css";
+import RestaurantCards from "./components/restaurantCard/restaurantCards"; 
+import DonorInventory from "./pages/donorInventory/donorInventory"; // Update the import path based on the actual location of donorInventory.js
+
 import {
   ApolloClient,
   createHttpLink,
@@ -20,7 +22,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'http://localhost:4000/graphql', // Replace with your GraphQL server endpoint
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -52,7 +54,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/food" element={<Restaurants />} />
+              <Route path="/food" element={<Restaurants />} /> {/* Added a route for "/food" */}
               <Route
                 path="/login"
                 element={
@@ -65,11 +67,13 @@ function App() {
               />
               <Route path="/logout" element={<Logout />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/Sustainability" element={<Sustainability />} /> {/* Added a route for Sustainability */}
+              <Route path="/Sustainability" element={<Sustainability />} />
+              <Route path="/donorInventory" element={<DonorInventory />} />
             </Routes>
           </div>
           <Footer />
         </Router>
+        <RestaurantCards /> {/* Move the RestaurantCards component inside the <Routes> */}
       </ApolloProvider>
     </div>
   );
