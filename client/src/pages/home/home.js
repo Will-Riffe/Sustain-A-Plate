@@ -36,7 +36,7 @@ const HomePage = () => {
           contribute to a more sustainable future. Every portion saved is one
           less wasted portion and one more step toward a better bottom line.
         </p>
-        <Link to="/sustainability" className="cta-button">
+        <Link to="/contact" className="cta-button">
           Get Started
         </Link>
       </section>
