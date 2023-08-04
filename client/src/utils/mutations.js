@@ -15,3 +15,20 @@ export const REGISTER = gql`
     }
   }
 `;
+
+export const UPDATEFOODLISTING = gql`
+mutation UpdateFoodListing($input: UpdateFoodListingInput) {
+  updateFoodListing(input: $input) {
+    foodItem
+  }
+}
+`;
+
+export const CREATEFOODLISTING = gql`
+mutation CreateFoodListing($input: CreateFoodListingInput) {
+  createFoodListing(input: $input) {
+    foodItem
+  }
+}
+`;
+
