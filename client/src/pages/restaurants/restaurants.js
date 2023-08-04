@@ -2,10 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import RESTAURANTPICS from "../../assets/restaurant-templates/restaurantpics";
 import RestaurantCards from "../../components/restaurantCard/restaurantCards";
-import {
-  QUERY_FOODLISTINGS,
-  // Other queries...
-} from "../../utils/queries"; // Updated the import path based on the actual location of queries.js
+import { QUERY_FOODLISTINGS } from "../../utils/queries";
 
 export default function Restaurants() {
   // Execute the QUERY_FOODLISTINGS query using useQuery

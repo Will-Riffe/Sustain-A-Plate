@@ -1,5 +1,5 @@
-// donorInventory.js
 import * as React from 'react';
+import { useQuery, useMutation } from '@apollo/client';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,6 +7,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {
+  QUERY_FOODLISTINGS_BY_STORE,
+} from '../../utils/queries';
+import {
+  CREATEFOODLISTING,
+  UPDATEFOODLISTING,
+  DELETEFOODLISTING,
+} from '../../utils/mutations'; // Updated the import path for mutations
 
 // Define the createData function to generate row data
 function createData(name, calories, fat, carbs, protein) {
@@ -21,7 +29,25 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-function DonorInventory() { // Fix the function name to start with a capital letter
+function DonorInventory() {
+  const { loading, error, data } = useQuery(QUERY_FOODLISTINGS_BY_STORE, {
+    variables: { donorId: 'Restaurant Name' }, // Replace 'Restaurant Name' with the actual donorId
+  });
+
+  const [createFoodListing] = useMutation(CREATEFOODLISTING);
+  const [updateFoodListing] = useMutation(UPDATEFOODLISTING);
+  const [deleteFoodListing] = useMutation(DELETEFOODLISTING);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  const foodListings = data.foodListingsByDonorId;
+
+  // Check if foodListings is null or empty before rendering the table
+  if (!foodListings || foodListings.length === 0) {
+    return <p>No food listings available for this donor.</p>;
+  }
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -35,13 +61,13 @@ function DonorInventory() { // Fix the function name to start with a capital let
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {foodListings.map((row) => (
             <TableRow
-              key={row.name}
+              key={row._id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.foodItem}
               </TableCell>
               <TableCell align="right">{row.calories}</TableCell>
               <TableCell align="right">{row.fat}</TableCell>
@@ -55,4 +81,4 @@ function DonorInventory() { // Fix the function name to start with a capital let
   );
 }
 
-export default DonorInventory; // Fix the export name to start with a capital letter
+export default DonorInventory;

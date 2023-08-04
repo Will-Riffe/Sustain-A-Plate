@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 
 const inventorySchema = new mongoose.Schema({
-    donorId: {
-        type: { mongoose.Schema.Types.ObjectId, ref: "Donor", required: true },
-    }
-        donorName: 
+  donorId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Donor",
+    required: true,
+  },
   foodItemId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "FoodListing",
@@ -15,6 +16,6 @@ const inventorySchema = new mongoose.Schema({
   qty: { type: Number, required: true },
 });
 
-const Transaction = mongoose.model("Transaction", transactionSchema);
+const Inventory = mongoose.model("Inventory", inventorySchema);
 
-module.exports = Transaction;
+module.exports = Inventory;
