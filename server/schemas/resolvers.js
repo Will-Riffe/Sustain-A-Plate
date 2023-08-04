@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const FoodListing = require('../models/foodListing');
 const Transaction = require('../models/transaction');
+const Donor = require('../models/donor');
 const bcrypt = require('bcryptjs');
 const { signToken } = require('../utils/auth');
 
@@ -61,6 +62,16 @@ const resolvers = {
         { new: true }
       );
     },
+
+    createNewDonor: async(_, { input }) => {
+      const { donorname } = input;
+      const newDonor = new Donor(
+        { donorname });
+
+        await newDonor.save();
+        return newDonor;
+    },
+
     createFoodListing: async (_, { input }) => {
       const { donorId, foodItem, description, expiryDate, quantity } = input;
 

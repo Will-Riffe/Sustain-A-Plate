@@ -10,6 +10,15 @@ const typeDefs = gql`
     password: String!
   }
 
+  type Donor {
+    _id: ID!
+    donorname: String!
+  }
+
+  input createDonorInput {
+    donorname: String!
+  }
+
   type FoodListing {
     _id: ID!
     donorId: ID!
@@ -83,6 +92,7 @@ const typeDefs = gql`
     createFoodListing(input: CreateFoodListingInput): FoodListing
     updateFoodListing(input: UpdateFoodListingInput): FoodListing
     deleteFoodListing(id: ID!): FoodListing
+    createNewDonor(input: createDonorInput): Donor
   }
 `;
 
