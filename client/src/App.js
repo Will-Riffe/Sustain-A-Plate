@@ -9,10 +9,10 @@ import Footer from "./components/footer/footer";
 import Navbar from "./components/Navbar/Navbar";
 import Restaurants from "./pages/restaurants/restaurants";
 import Sustainability from "./pages/Sustainability/Sustainability"; // Imported the Sustainability component
-import Contact from './pages/contact/contact';
-import RestaurantCards from "./components/restaurantCard/restaurantCards"; 
-import DonorInventory from "./pages/donorInventory/donorInventory"; // Update the import path based on the actual location of donorInventory.js
-import "./App.css"; //DO NOT DELETE ;P
+import Contact from "./pages/contact/contact";
+import RestaurantCards from "./components/restaurantCard/restaurantCards";
+import FoodListings from "./components/foodListings/foodListings"; // Update the import path based on the actual location of donorInventory.js
+import "./App.css";
 import {
   ApolloClient,
   createHttpLink,
@@ -20,9 +20,10 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import DonorInventory from "./pages/donorInventory/donorInventory";
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql', // Replace with your GraphQL server endpoint
+  uri: "http://localhost:4000/graphql", // Replace with your GraphQL server endpoint
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -54,7 +55,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/food" element={<Restaurants />} /> {/* Added a route for "/food" */}
+              <Route path="/food" element={<Restaurants />} />{" "}
+              {/* Added a route for "/food" */}
               <Route
                 path="/login"
                 element={
@@ -68,6 +70,7 @@ function App() {
               <Route path="/logout" element={<Logout />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Sustainability" element={<Sustainability />} />
+              <Route path="/foodListings" element={<FoodListings />} />
               <Route path="/donorInventory" element={<DonorInventory />} />
             </Routes>
           </div>
