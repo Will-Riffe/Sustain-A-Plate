@@ -53,4 +53,13 @@ a h3 {
     height: 10%;
     background-color: var(--colorOne);
   }
+
+  div .logo-container a {
+    margin-left: auto;
+  }
+  
+  /* Sustain-A-Plate Heading */
+  a h3 {
+    font-size: 1.5rem;
+  }
 }
