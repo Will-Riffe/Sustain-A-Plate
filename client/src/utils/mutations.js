@@ -32,3 +32,10 @@ mutation CreateFoodListing($input: CreateFoodListingInput) {
 }
 `;
 
+export const DELETEFOODLISTING = gql`
+mutation DeleteFoodListing($deleteFoodListingId: ID!) {
+  deleteFoodListing(id: $deleteFoodListingId) {
+    foodItem
+  }
+}
+`;
