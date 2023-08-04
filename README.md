@@ -1,7 +1,7 @@
 
 # Sustain - A - Plate
 
-![Screenshot of application](/screenshot.png)
+![Screenshot of application](./client/src/assets/screenshot.png)
 
 ## Table of Contents
 - [Description](#description)
