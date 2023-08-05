@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const FoodListing = require('../models/foodListing');
 const Transaction = require('../models/transaction');
+const Donor = require('../models/donor');
 const bcrypt = require('bcryptjs');
 const { signToken } = require('../utils/auth');
 const formatDate = require('../utils/date');
@@ -10,6 +11,7 @@ const resolvers = {
     
     users: async () => User.find(),
 
+    user: async (_, {id} ) => User.findById(id),
     foodListings: async () => {
       const listings = await FoodListing.find();
       return listings.map(listing => ({
@@ -21,7 +23,8 @@ const resolvers = {
     transactions: async () => Transaction.find(),
 
     foodListing: async (_, { id }) => FoodListing.findById(id),
-
+    donors: async() => Donor.find(),
+    foodListingByDonorId: async(_, {donorId} ) => await FoodListing.find({donorId: donorId}),
   },
 
 
@@ -75,6 +78,16 @@ const resolvers = {
         { new: true }
       );
     },
+
+    createNewDonor: async(_, { input }) => {
+      const { donorname } = input;
+      const newDonor = new Donor(
+        { donorname });
+
+        await newDonor.save();
+        return newDonor;
+    },
+
     createFoodListing: async (_, { input }) => {
       const { donorId, foodItem, description, expiryDate, quantity } = input;
       const expiryDateFormat = formatDate( expiryDate, "MM-dd-yy")

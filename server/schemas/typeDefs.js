@@ -10,6 +10,16 @@ const typeDefs = gql`
     password: String!
   }
 
+  type Donor {
+    _id: ID!
+    donorname: String!
+    foodListing: FoodListing
+  }
+
+  input createDonorInput {
+    donorname: String!
+  }
+
   type FoodListing {
     _id: ID!
     donorId: ID!
@@ -69,11 +79,13 @@ const typeDefs = gql`
   }
 
   type Query {
+    user(id: ID!, username: String): User
     users: [User]
+    donors: [Donor]
     foodListings: [FoodListing]
     transactions: [Transaction]
     foodListing(id: ID!): FoodListing
-    foodListingsByDonorId(id: ID!): [FoodListing]
+    foodListingByDonorId(donorId: [ID]!): FoodListing
   }
 
   type Mutation {
@@ -83,6 +95,7 @@ const typeDefs = gql`
     createFoodListing(input: CreateFoodListingInput): FoodListing
     updateFoodListing(input: UpdateFoodListingInput): FoodListing
     deleteFoodListing(id: ID!): FoodListing
+    createNewDonor(input: createDonorInput): Donor
   }
 `;
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const foodListingSchema = new mongoose.Schema({
-  donorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  donorId: { type: mongoose.Schema.Types.ObjectId, ref: 'Donor', required: true },
   foodItem: { type: String, required: true },
   description: { type: String, required: true },
   expiryDate: { type: Date, required: true },
