@@ -11,9 +11,9 @@ const resolvers = {
     user: async (_, {id} ) => User.findById(id),
     foodListings: async () => FoodListing.find(),
     transactions: async () => Transaction.find(),
-    // foodListing: async (_, { id }) => FoodListing.findById(id),
+    foodListing: async (_, { id }) => FoodListing.findById(id),
     donors: async() => Donor.find(),
-    foodListing: async(_, { donorId } ) => FoodListing.findById(donorId),
+    foodListingByDonorId: async(_, {donorId} ) => await FoodListing.find({donorId: donorId}),
   },
   Mutation: {
     registerUser: async (_, { input }) => {

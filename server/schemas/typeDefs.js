@@ -85,7 +85,7 @@ const typeDefs = gql`
     foodListings: [FoodListing]
     transactions: [Transaction]
     foodListing(id: ID!): FoodListing
-    foodListingsByDonorId(Donor: ID!, donorname: String): FoodListing
+    foodListingByDonorId(donorId: [ID]!): FoodListing
   }
 
   type Mutation {
