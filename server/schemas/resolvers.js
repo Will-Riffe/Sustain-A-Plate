@@ -12,15 +12,13 @@ const resolvers = {
     user: async (_, { id }) => User.findById(id),
     foodListings: async () => FoodListing.find(),
     transactions: async () => Transaction.find(),
-
     foodListing: async (_, { id }) => FoodListing.findById(id),
     donors: async () => Donor.find(),
     foodListingsByDonorId: async (_, { donorId }) => {
       console.log(donorId);
       let data = await FoodListing.find({ donorId: new ObjectId(donorId) });
-
       console.log(data);
-      return data;
+      return data || [];
     },
   },
 
