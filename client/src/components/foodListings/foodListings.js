@@ -1,6 +1,5 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
-import { formatDate } from '../utils/date'; 
 
 const GET_FOOD_LISTINGS = gql`
   query {
