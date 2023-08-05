@@ -12,6 +12,7 @@ const resolvers = {
     users: async () => User.find(),
 
     user: async (_, {id} ) => User.findById(id),
+
     foodListings: async () => {
       const listings = await FoodListing.find();
       return listings.map(listing => ({
@@ -23,7 +24,9 @@ const resolvers = {
     transactions: async () => Transaction.find(),
 
     foodListing: async (_, { id }) => FoodListing.findById(id),
+
     donors: async() => Donor.find(),
+    
     foodListingByDonorId: async(_, {donorId} ) => await FoodListing.find({donorId: donorId}),
   },
 
