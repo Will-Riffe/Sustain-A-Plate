@@ -16,14 +16,14 @@ export default function Restaurants() {
   // Data for each restaurant
   const store = [
     {
-      title: "Berts Cafe",
-      image: RESTAURANTPICS.LocalCafe,
-      link: "/donorInventory",
-    },
-    {
       title: "Shoprite",
       image: RESTAURANTPICS.Shoprite,
       link: "/Shoprite",
+    },
+    {
+      title: "Berts Cafe",
+      image: RESTAURANTPICS.LocalCafe,
+      link: "/donorInventory",
     },
     {
       title: "Panera",
