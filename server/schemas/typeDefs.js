@@ -1,6 +1,6 @@
 // schemas.js
 
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -85,7 +85,7 @@ const typeDefs = gql`
     foodListings: [FoodListing]
     transactions: [Transaction]
     foodListing(id: ID!): FoodListing
-    foodListingByDonorId(donorId: [ID]!): FoodListing
+    foodListingsByDonorId(donorId: String!): [FoodListing]
   }
 
   type Mutation {
