@@ -12,6 +12,7 @@ import Sustainability from "./pages/Sustainability/Sustainability"; // Imported 
 import Contact from "./pages/contact/contact";
 import RestaurantCards from "./components/restaurantCard/restaurantCards";
 import FoodListings from "./components/foodListings/foodListings"; // Update the import path based on the actual location of donorInventory.js
+import Shoprite from "./pages/shoprite/shoprite";
 import "./App.css"; // DO NOT DELETE ;P
 import {
   ApolloClient,
@@ -72,6 +73,7 @@ function App() {
               <Route path="/Sustainability" element={<Sustainability />} />
               <Route path="/foodListings" element={<FoodListings />} />
               <Route path="/donorInventory" element={<DonorInventory />} />
+              <Route path="/Shoprite" element={<Shoprite />} />
             </Routes>
           </div>
           <RestaurantCards /> {/* Move the RestaurantCards component inside the <Routes> */}

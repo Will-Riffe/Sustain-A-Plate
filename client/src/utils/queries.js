@@ -52,8 +52,9 @@ query FoodListing($foodListingId: ID!) {
 `;
 
 export const QUERY_FOODLISTINGS_BY_STORE = gql`
-query FoodListingsByDonorId($donorId: ID!) {
-  foodListingsByDonorId(id: $donorId) {
+query FoodListingsByDonorId($donorId: String!) {
+  foodListingsByDonorId(donorId: $donorId) {
+    _id
     donorId
     foodItem
     description

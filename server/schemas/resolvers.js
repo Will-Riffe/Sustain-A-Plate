@@ -5,6 +5,7 @@ const Donor = require("../models/donor");
 const bcrypt = require("bcryptjs");
 const { signToken } = require("../utils/auth");
 const { ObjectId } = require("mongodb");
+// const { formatDate } = require('../utils/date');
 
 const resolvers = {
   Query: {
@@ -20,6 +21,12 @@ const resolvers = {
       console.log(data);
       return data || [];
     },
+    // foodListingsByDonorName: async (_, { donorname }) => {
+    //   console.log(donorname);
+    //   let data = await FoodListing.find( donorname );
+    //   console.log(data);
+    //   return data || [];
+    // },
   },
 
   Mutation: {
@@ -83,12 +90,12 @@ const resolvers = {
 
     createFoodListing: async (_, { input }) => {
       const { donorId, foodItem, description, expiryDate, quantity } = input;
-      const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
+      // const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
       const newFoodListing = new FoodListing({
         donorId,
         foodItem,
         description,
-        expiryDate: expiryDateFormat,
+        expiryDate,
         quantity,
         isClaimed: false,
       });
@@ -100,13 +107,13 @@ const resolvers = {
     updateFoodListing: async (_, { input }) => {
       const { id, foodItem, description, expiryDate, quantity, isClaimed } =
         input;
-      const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
+      // const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
       const updatedFoodListing = await FoodListing.findByIdAndUpdate(
         id,
         {
           foodItem,
           description,
-          expiryDate: expiryDateFormat,
+          expiryDate,
           quantity,
           isClaimed,
         },
