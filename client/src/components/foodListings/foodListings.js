@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 
+
 const GET_FOOD_LISTINGS = gql`
   query {
     foodListings {
@@ -14,6 +15,7 @@ const GET_FOOD_LISTINGS = gql`
     }
   }
 `;
+
 function FoodListings() {
   const { loading, error, data } = useQuery(GET_FOOD_LISTINGS);
 

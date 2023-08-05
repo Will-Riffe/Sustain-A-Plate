@@ -1,5 +1,3 @@
-// seedDB.js
-
 const mongoose = require("mongoose");
 const User = require("../models/user");
 const FoodListing = require("../models/foodListing");
@@ -14,44 +12,48 @@ mongoose.connect(db, {
 });
 
 async function seedDB() {
-  await User.deleteMany({});
-  await FoodListing.deleteMany({});
-  await Transaction.deleteMany({});
+  try {
+    await User.deleteMany({});
+    await FoodListing.deleteMany({});
+    await Transaction.deleteMany({});
 
-  const hashedPassword = await bcrypt.hash("password", 10);
+    const hashedPassword = await bcrypt.hash("password", 10);
 
-  const users = [
-    {
+    const user = await User.create({
       username: "user1",
       email: "user1@example.com",
       password: hashedPassword,
       location: "New York",
-    },
-  ];
+    });
 
-  const foodListings = [
-    {
-      donorId: "61d634706a98a61edd42bf45",
+    const donorId = user._id;
+
+    const foodListing = await FoodListing.create({
+      donorId: donorId,
       foodItem: "Apples",
       description: "A bag of apples",
-      expiryDate: new Date(),
+      expiryDate: new Date(2025, 7, 6),
       quantity: 10,
-    },
-  ];
+    });
 
-  const transactions = [
-    {
-      donorId: "61d634706a98a61edd42bf45",
-      recipientId: "61d634706a98a61edd42bf45",
-      foodItemId: "61d634706a98a61edd42bf45",
-    },
-  ];
+    const foodItemId = foodListing._id;
 
-  await User.insertMany(users);
-  await FoodListing.insertMany(foodListings);
-  await Transaction.insertMany(transactions);
+    const recipientId = user._id;
 
-  console.log("Database seeded!");
+    const transaction = {
+      donorId: donorId,
+      recipientId: recipientId,
+      foodItemId: foodItemId,
+    };
+
+    await Transaction.create(transaction);
+
+    console.log("Database seeded!");
+  } catch (err) {
+    console.error("Error seeding database:", err);
+  } finally {
+    mongoose.connection.close();
+  }
 }
 
-seedDB().then(() => mongoose.connection.close());
+seedDB();

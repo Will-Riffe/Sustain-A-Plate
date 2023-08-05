@@ -12,6 +12,7 @@ const resolvers = {
     user: async (_, { id }) => User.findById(id),
     foodListings: async () => FoodListing.find(),
     transactions: async () => Transaction.find(),
+
     foodListing: async (_, { id }) => FoodListing.findById(id),
     donors: async () => Donor.find(),
     foodListingsByDonorId: async (_, { donorId }) => {
@@ -22,6 +23,7 @@ const resolvers = {
       return data;
     },
   },
+
   Mutation: {
     registerUser: async (_, { input }) => {
       const { username, email, password } = input;
@@ -83,12 +85,12 @@ const resolvers = {
 
     createFoodListing: async (_, { input }) => {
       const { donorId, foodItem, description, expiryDate, quantity } = input;
-
+      const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
       const newFoodListing = new FoodListing({
         donorId,
         foodItem,
         description,
-        expiryDate,
+        expiryDate: expiryDateFormat,
         quantity,
         isClaimed: false,
       });
@@ -100,13 +102,13 @@ const resolvers = {
     updateFoodListing: async (_, { input }) => {
       const { id, foodItem, description, expiryDate, quantity, isClaimed } =
         input;
-
+      const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
       const updatedFoodListing = await FoodListing.findByIdAndUpdate(
         id,
         {
           foodItem,
           description,
-          expiryDate,
+          expiryDate: expiryDateFormat,
           quantity,
           isClaimed,
         },
