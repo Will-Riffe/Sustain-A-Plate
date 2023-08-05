@@ -13,6 +13,7 @@ const typeDefs = gql`
   type Donor {
     _id: ID!
     donorname: String!
+    foodListing: FoodListing
   }
 
   input createDonorInput {
@@ -78,11 +79,13 @@ const typeDefs = gql`
   }
 
   type Query {
+    user(id: ID!, username: String): User
     users: [User]
+    donors: [Donor]
     foodListings: [FoodListing]
     transactions: [Transaction]
     foodListing(id: ID!): FoodListing
-    foodListingsByDonorId(id: ID!): [FoodListing]
+    foodListingsByDonorId(Donor: ID!, donorname: String): FoodListing
   }
 
   type Mutation {

@@ -23,7 +23,7 @@ export default function Restaurants() {
     {
       title: "ShopRite",
       image: RESTAURANTPICS.Shoprite,
-      link: "/donorInventory",
+      link: "/shoprite",
     },
     {
       title: "Panera",

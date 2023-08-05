@@ -8,9 +8,12 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => User.find(),
+    user: async (_, {id} ) => User.findById(id),
     foodListings: async () => FoodListing.find(),
     transactions: async () => Transaction.find(),
-    foodListing: async (_, { id }) => FoodListing.findById(id),
+    // foodListing: async (_, { id }) => FoodListing.findById(id),
+    donors: async() => Donor.find(),
+    foodListing: async(_, { donorId } ) => FoodListing.findById(donorId),
   },
   Mutation: {
     registerUser: async (_, { input }) => {
