@@ -2,6 +2,10 @@
 
 Sustain-A-Plate is a web application that allows users to explore sustainable and eco-friendly food options. The application provides information on restaurants, cafes, and food products that promote sustainability and environmental consciousness. Users can discover new eco-friendly food choices and contribute by adding their favorite sustainable food options to the platform.
 
+
+![Screenshot of application](./client/src/assets/screenshot.png)
+
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
