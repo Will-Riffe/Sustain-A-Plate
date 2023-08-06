@@ -34,7 +34,7 @@ async function seedDB() {
         donorname: "Shoprite",
         foodItem: "Apples",
         description: "A bag of apples",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -42,7 +42,7 @@ async function seedDB() {
         donorname: "Shoprite",
         foodItem: "Bananas",
         description: "A bag of Bananas",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -50,7 +50,7 @@ async function seedDB() {
         donorname: "Shoprite",
         foodItem: "Frozen Pizza",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -58,7 +58,7 @@ async function seedDB() {
         donorname: "Shoprite",
         foodItem: "Wings",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -66,7 +66,7 @@ async function seedDB() {
         donorname: "Panera",
         foodItem: "Apples",
         description: "A bag of apples",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -74,7 +74,7 @@ async function seedDB() {
         donorname: "Panera",
         foodItem: "Bananas",
         description: "A bag of Bananas",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -82,7 +82,7 @@ async function seedDB() {
         donorname: "Panera",
         foodItem: "Frozen Pizza",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -90,7 +90,7 @@ async function seedDB() {
         donorname: "Panera",
         foodItem: "Wings",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -98,7 +98,7 @@ async function seedDB() {
         donorname: "Dunkin Donuts",
         foodItem: "Apples",
         description: "A bag of apples",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -106,7 +106,7 @@ async function seedDB() {
         donorname: "Dunkin Donuts",
         foodItem: "Bananas",
         description: "A bag of Bananas",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -114,7 +114,7 @@ async function seedDB() {
         donorname: "Dunkin Donuts",
         foodItem: "Frozen Pizza",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -122,7 +122,7 @@ async function seedDB() {
         donorname: "Dunkin Donuts",
         foodItem: "Wings",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -130,7 +130,7 @@ async function seedDB() {
         donorname: "Wegmans",
         foodItem: "Apples",
         description: "A bag of apples",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -138,7 +138,7 @@ async function seedDB() {
         donorname: "Wegmans",
         foodItem: "Bananas",
         description: "A bag of Bananas",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -146,7 +146,7 @@ async function seedDB() {
         donorname: "Wegmans",
         foodItem: "Frozen Pizza",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -154,7 +154,7 @@ async function seedDB() {
         donorname: "Wegmans",
         foodItem: "Wings",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -162,7 +162,7 @@ async function seedDB() {
         donorname: "McArthur Pub",
         foodItem: "Apples",
         description: "A bag of apples",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -170,7 +170,7 @@ async function seedDB() {
         donorname: "McArthur Pub",
         foodItem: "Bananas",
         description: "A bag of Bananas",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -178,7 +178,7 @@ async function seedDB() {
         donorname: "McArthur Pub",
         foodItem: "Frozen Pizza",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -186,7 +186,7 @@ async function seedDB() {
         donorname: "McArthur Pub",
         foodItem: "Wings",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -194,7 +194,7 @@ async function seedDB() {
         donorname: "Berts Cafe",
         foodItem: "Apples",
         description: "A bag of apples",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -202,7 +202,7 @@ async function seedDB() {
         donorname: "Berts Cafe",
         foodItem: "Bananas",
         description: "A bag of Bananas",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -210,7 +210,7 @@ async function seedDB() {
         donorname: "Berts Cafe",
         foodItem: "Frozen Pizza",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       },
       {
@@ -218,7 +218,7 @@ async function seedDB() {
         donorname: "Berts Cafe",
         foodItem: "Wings",
         description: "Frozen Food",
-        expiryDate: new Date(2025, 7, 6),
+        expiryDate: new Date(2023, 8, 6),
         quantity: 10,
       }
     );

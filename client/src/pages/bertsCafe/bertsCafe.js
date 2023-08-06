@@ -56,7 +56,10 @@ export default function BertsCafe() {
           <p>Food ID: {listing._id}</p>
           <p>Food Item: {listing.foodItem}</p>
           <p>Description: {listing.description}</p>
-          <p>Expiry Date: {listing.expiryDate}</p>
+          <p>
+            Expiry Date:{" "}
+            {new Date(Number(listing.expiryDate)).toLocaleDateString("en-US")}
+          </p>
           <p>Quantity: {listing.quantity}</p>
           <p>Is Claimed: {listing.isClaimed ? "Yes" : "No"}</p>
           <button type="submit" onClick={handleSubmit}>
