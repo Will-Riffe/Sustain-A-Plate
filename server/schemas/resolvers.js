@@ -58,11 +58,11 @@ const resolvers = {
 
       const user = await User.findOne({ username });
       if (!user) {
-        throw new Error("User not found");
+        throw new Error("Invalid credentials");
       }
-
       const isPasswordValid = await bcrypt.compare(password, user.password);
-      if (!isPasswordValid) {
+      console.log({user, isPasswordValid, username, password})
+      if (!isPasswordValid ) {
         throw new Error("Invalid credentials");
       }
 
