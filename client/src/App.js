@@ -13,6 +13,12 @@ import Contact from "./pages/contact/contact";
 import RestaurantCards from "./components/restaurantCard/restaurantCards";
 import FoodListings from "./components/foodListings/foodListings"; // Update the import path based on the actual location of donorInventory.js
 import Shoprite from "./pages/shoprite/shoprite";
+import BertsCafe from "./pages/bertsCafe/bertsCafe"; // Imported the Berts page
+import Panera from "./pages/panera/panera"; // Imported the Panera page
+import DunkinDonuts from "./pages/dunkinDonuts/dunkinDonuts"; // Imported the DunkinDonuts page
+import Wegmans from "./pages/wegmans/wegmans"; // Imported the Wegmans page
+import McArthurPub from "./pages/mcArthurPub/mcArthurPub"; // Imported the
+
 import "./App.css"; // DO NOT DELETE ;P
 import {
   ApolloClient,
@@ -74,6 +80,11 @@ function App() {
               <Route path="/foodListings" element={<FoodListings />} />
               <Route path="/donorInventory" element={<DonorInventory />} />
               <Route path="/Shoprite" element={<Shoprite />} />
+              <Route path="/BertsCafe" element={<BertsCafe />} />
+              <Route path="/Panera" element={<Panera />} />
+              <Route path="/DunkinDonuts" element={<DunkinDonuts />} />
+              <Route path="/Wegmans" element={<Wegmans />} />
+              <Route path="/McArthurPub" element={<McArthurPub />} />
             </Routes>
           </div>
           <RestaurantCards />{" "}

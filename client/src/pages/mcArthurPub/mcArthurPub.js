@@ -6,10 +6,10 @@ import { UPDATEFOODLISTING } from "../../utils/mutations";
 import { DELETEFOODLISTING } from "../../utils/mutations";
 import AuthService from "../../utils/auth";
 
-export default function Shoprite() {
+export default function McArthurPub() {
   const { loading, error, data } = useQuery(QUERY_FOODLISTINGS_BY_STORENAME, {
     variables: {
-      donorname: "Shoprite",
+      donorname: "McArthur Pub",
     },
   });
 
@@ -48,7 +48,7 @@ export default function Shoprite() {
 
   return (
     <div>
-      <h2>Shoprite's Food Listings</h2>
+      <h2>McArthur Pub's Food Listings</h2>
       <hr />
       {data.foodListingsByDonorName.map((listing) => (
         <div key={listing._id} onSubmit={handleSubmit}>

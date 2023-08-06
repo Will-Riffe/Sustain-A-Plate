@@ -4,12 +4,11 @@ import { QUERY_FOODLISTINGS_BY_STORENAME } from "../../utils/queries";
 import { useMutation } from "@apollo/client";
 import { UPDATEFOODLISTING } from "../../utils/mutations";
 import { DELETEFOODLISTING } from "../../utils/mutations";
-import AuthService from "../../utils/auth";
 
-export default function Shoprite() {
+export default function Panera() {
   const { loading, error, data } = useQuery(QUERY_FOODLISTINGS_BY_STORENAME, {
     variables: {
-      donorname: "Shoprite",
+      donorname: "Panera",
     },
   });
 
@@ -48,7 +47,7 @@ export default function Shoprite() {
 
   return (
     <div>
-      <h2>Shoprite's Food Listings</h2>
+      <h2>Panera's Food Listings</h2>
       <hr />
       {data.foodListingsByDonorName.map((listing) => (
         <div key={listing._id} onSubmit={handleSubmit}>
