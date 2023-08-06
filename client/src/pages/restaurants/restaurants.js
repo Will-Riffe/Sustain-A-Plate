@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import RESTAURANTPICS from "../../assets/restaurant-templates/restaurantpics";
 import RestaurantCards from "../../components/restaurantCard/restaurantCards";
 
@@ -13,7 +14,7 @@ export default function Restaurants() {
     {
       title: "BertsCafe",
       image: RESTAURANTPICS.LocalCafe,
-      link: "/BertsCafe",
+      link: "/Berts Cafe",
     },
     {
       title: "Panera",
@@ -23,7 +24,7 @@ export default function Restaurants() {
     {
       title: "Dunkin Donuts",
       image: RESTAURANTPICS.DunkinDonuts,
-      link: "/DunkinDonuts",
+      link: "/Dunkin Donuts",
     },
     {
       title: "Wegmans",
@@ -33,7 +34,7 @@ export default function Restaurants() {
     {
       title: "McArthur Pub",
       image: RESTAURANTPICS.LocalRestaurant,
-      link: "/McArthurPub",
+      link: "/McArthur Pub",
     },
   ];
 
@@ -41,9 +42,10 @@ export default function Restaurants() {
     <section className="restaurant-space">
       <div className="restaurantCard-sections">
         {store.map((restcard, index) => (
-          <RestaurantCards key={index} {...restcard}>
-            {/* Filter the food listings for the current restaurant */}
-          </RestaurantCards>
+          <Link to={restcard.link} key={index}>
+            {/* Move the RestaurantCards component inside the Link */}
+            <RestaurantCards {...restcard} />
+          </Link>
         ))}
       </div>
       <style jsx>{`
