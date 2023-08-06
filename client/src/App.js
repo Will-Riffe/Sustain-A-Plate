@@ -24,7 +24,7 @@ import { setContext } from "@apollo/client/link/context";
 import DonorInventory from "./pages/donorInventory/donorInventory";
 
 const httpLink = createHttpLink({
-  uri: process.env.MONGODB_URI || "http://localhost:4000/graphql", // Replace with your GraphQL server endpoint
+  uri: process.env.MONGODB_URI, // Replace with your GraphQL server endpoint
 });
 
 const authLink = setContext((_, { headers }) => {
