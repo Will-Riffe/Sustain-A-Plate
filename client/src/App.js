@@ -13,6 +13,8 @@ import Contact from "./pages/contact/contact";
 import RestaurantCards from "./components/restaurantCard/restaurantCards";
 import FoodListings from "./components/foodListings/foodListings"; // Update the import path based on the actual location of donorInventory.js
 import Inventory from "./pages/Inventory/Inventory";
+import About from "./pages/About";
+
 
 import "./App.css"; // DO NOT DELETE ;P
 import {
@@ -75,6 +77,8 @@ function App() {
               <Route path="/foodListings" element={<FoodListings />} />
               <Route path="/donorInventory" element={<DonorInventory />} />
               <Route path="/:donorName" element={<Inventory />} />
+              <Route path="/about" element={<About />} />
+
             </Routes>
           </div>
           <RestaurantCards />{" "}
