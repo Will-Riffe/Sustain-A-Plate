@@ -24,7 +24,7 @@ import { setContext } from "@apollo/client/link/context";
 import DonorInventory from "./pages/donorInventory/donorInventory";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/graphql", // Replace with your GraphQL server endpoint
+  uri: process.env.MONGODB_URI || "http://localhost:4000/graphql", // Replace with your GraphQL server endpoint
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -76,8 +76,9 @@ function App() {
               <Route path="/Shoprite" element={<Shoprite />} />
             </Routes>
           </div>
-          <RestaurantCards /> {/* Move the RestaurantCards component inside the <Routes> */}
-          <Footer /> 
+          <RestaurantCards />{" "}
+          {/* Move the RestaurantCards component inside the <Routes> */}
+          <Footer />
           {/*
                 Sacred Space.
                 Avoid violating the space
