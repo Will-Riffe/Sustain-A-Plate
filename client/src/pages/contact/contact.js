@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contact.css';
 
 function Contact() {
+    const [messageSent, setMessageSent] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log('Form submitted!');
+        setMessageSent(true);
+    };
+
     return (
         <div className="contactBody">
             <section id="contact" className="contact-section">
                 <h2>Contact Us</h2>
                 <div className="contact-form">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name:</label>
                             <input type="text" id="name" name="name" required />
@@ -22,11 +31,11 @@ function Contact() {
                         </div>
                         <button type="submit">Submit</button>
                     </form>
+                    {messageSent && <p>Thank you! Your message has been sent.</p>}
                 </div>
             </section>
         </div>
     );
 }
-
 
 export default Contact;
