@@ -26,27 +26,54 @@ async function seedDB() {
       location: "New York",
     });
 
-    const donorId = user._id;
+    // const donorId = user._id;
 
-    const foodListing = await FoodListing.create({
-      donorId: donorId,
+    const foodListing = await FoodListing.create(
+    {
+      donorId: "64cd7cead3c47624c798b7c4",
+      donorname: "Shoprite",
       foodItem: "Apples",
       description: "A bag of apples",
       expiryDate: new Date(2025, 7, 6),
       quantity: 10,
-    });
+    },
+    {
+      donorId: "64cd7cead3c47624c798b7c4",
+      donorname: "Shoprite",
+      foodItem: "Bananas",
+      description: "A bag of Bananas",
+      expiryDate: new Date(2025, 7, 6),
+      quantity: 10,
+    },
+    {
+      donorId: "64cd7cead3c47624c798b7c4",
+      donorname: "Shoprite",
+      foodItem: "Frozen Pizza",
+      description: "Frozen Food",
+      expiryDate: new Date(2025, 7, 6),
+      quantity: 10,
+    },
+    {
+      donorId: "64cd7cead3c47624c798b7c4",
+      donorname: "Shoprite",
+      foodItem: "Wings",
+      description: "Frozen Food",
+      expiryDate: new Date(2025, 7, 6),
+      quantity: 10,
+    }
+    );
 
-    const foodItemId = foodListing._id;
+    // const foodItemId = foodListing._id;
 
-    const recipientId = user._id;
+    // const recipientId = user._id;
 
-    const transaction = {
-      donorId: donorId,
-      recipientId: recipientId,
-      foodItemId: foodItemId,
-    };
+    // const transaction = {
+    //   donorId: donorId,
+    //   recipientId: recipientId,
+    //   foodItemId: foodItemId,
+    // };
 
-    await Transaction.create(transaction);
+    // await Transaction.create(transaction);
 
     console.log("Database seeded!");
   } catch (err) {

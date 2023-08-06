@@ -21,12 +21,12 @@ const resolvers = {
       console.log(data);
       return data || [];
     },
-    // foodListingsByDonorName: async (_, { donorname }) => {
-    //   console.log(donorname);
-    //   let data = await FoodListing.find( donorname );
-    //   console.log(data);
-    //   return data || [];
-    // },
+    foodListingsByDonorName: async (_, { donorname }) => {
+      console.log(donorname);
+      let data = await FoodListing.find( {donorname: donorname} );
+      console.log(data);
+      return data || [];
+    },
   },
 
   Mutation: {
@@ -89,10 +89,11 @@ const resolvers = {
     },
 
     createFoodListing: async (_, { input }) => {
-      const { donorId, foodItem, description, expiryDate, quantity } = input;
+      const { donorId, donorname, foodItem, description, expiryDate, quantity } = input;
       // const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
       const newFoodListing = new FoodListing({
         donorId,
+        donorname,
         foodItem,
         description,
         expiryDate,
@@ -105,12 +106,14 @@ const resolvers = {
     },
 
     updateFoodListing: async (_, { input }) => {
-      const { id, foodItem, description, expiryDate, quantity, isClaimed } =
+      const { id, donorId, donorname, foodItem, description, expiryDate, quantity, isClaimed } =
         input;
       // const expiryDateFormat = formatDate(expiryDate, "MM-dd-yy");
       const updatedFoodListing = await FoodListing.findByIdAndUpdate(
         id,
         {
+          donorId,
+          donorname,
           foodItem,
           description,
           expiryDate,

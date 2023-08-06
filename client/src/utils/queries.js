@@ -64,3 +64,17 @@ query FoodListingsByDonorId($donorId: String!) {
   }
 }
 `;
+
+export const QUERY_FOODLISTINGS_BY_STORENAME = gql`
+query FoodListingsByDonorName($donorname: String!) {
+  foodListingsByDonorName(donorname: $donorname) {
+    _id
+    donorId
+    donorname
+    foodItem
+    description
+    expiryDate
+    quantity
+    isClaimed
+  }
+}`;

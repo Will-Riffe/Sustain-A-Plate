@@ -23,6 +23,7 @@ const typeDefs = gql`
   type FoodListing {
     _id: ID!
     donorId: ID!
+    donorname: String!
     foodItem: String!
     description: String!
     expiryDate: String!
@@ -33,6 +34,7 @@ const typeDefs = gql`
   type Transaction {
     _id: ID!
     donorId: ID!
+    donorname: String!
     recipientId: ID!
     foodItemId: ID!
     timestamp: String!
@@ -58,6 +60,7 @@ const typeDefs = gql`
 
   input CreateFoodListingInput {
     donorId: ID!
+    donorname: String!
     foodItem: String!
     description: String!
     expiryDate: String!
@@ -66,6 +69,8 @@ const typeDefs = gql`
 
   input UpdateFoodListingInput {
     id: ID!
+    donorId: ID!
+    donorname: String!
     foodItem: String
     description: String
     expiryDate: String
@@ -86,7 +91,7 @@ const typeDefs = gql`
     transactions: [Transaction]
     foodListing(id: ID!): FoodListing
     foodListingsByDonorId(donorId: String!): [FoodListing]
-    # foodListingsByDonorName(donorname: String!): [FoodListing]
+    foodListingsByDonorName(donorname: String!): [FoodListing]
   }
 
   type Mutation {
