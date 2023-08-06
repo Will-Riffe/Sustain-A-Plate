@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const transactionSchema = new mongoose.Schema({
-  donorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  recipientId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  foodItemId: { type: mongoose.Schema.Types.ObjectId, ref: 'FoodListing', required: true },
-  timestamp: { type: Date, default: Date.now },
+  claimDate: {
+    type: Date,
+    default: Date.now
+  },
+  foodListings: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'FoodListing'
+    }
+  ]
 });
 
 const Transaction = mongoose.model('Transaction', transactionSchema);
