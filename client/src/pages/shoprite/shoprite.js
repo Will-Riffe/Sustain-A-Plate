@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { QUERY_FOODLISTINGS_BY_STORE } from '../../utils/queries';
-import { useMutation } from '@apollo/client';
-import { UPDATEFOODLISTING } from '../../utils/mutations';
-import { DELETEFOODLISTING } from '../../utils/mutations';
+import React, { useState } from "react";
+import { useQuery } from "@apollo/client";
+import { QUERY_FOODLISTINGS_BY_STORENAME } from "../../utils/queries";
+import { useMutation } from "@apollo/client";
+import { UPDATEFOODLISTING } from "../../utils/mutations";
+import { DELETEFOODLISTING } from "../../utils/mutations";
 
 export default function Shoprite() {
-  const { loading, error, data } = useQuery(QUERY_FOODLISTINGS_BY_STORE, {
+  const { loading, error, data } = useQuery(QUERY_FOODLISTINGS_BY_STORENAME, {
     variables: {
-      donorId: "64cd7cead3c47624c798b7c4"
-    }
+      donorname: "Shoprite",
+    },
   });
 
-  const [foodItem, SelectFoodItem] = useState('');
-  const [quantity, SelectQuantity] = useState('');
-  const [isClaimed, SelectIsClaimed] = useState('');
+  const [foodItem, SelectFoodItem] = useState("");
+  const [quantity, SelectQuantity] = useState("");
+  const [isClaimed, SelectIsClaimed] = useState("");
 
   const [UpdateFoodListing] = useMutation(UPDATEFOODLISTING);
-  const [DeleteFoodListing] = useMutation(DELETEFOODLISTING); 
+  const [DeleteFoodListing] = useMutation(DELETEFOODLISTING);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,11 +28,10 @@ export default function Shoprite() {
           input: {
             foodItem: foodItem,
             quantity: quantity,
-            isClaimed: isClaimed
+            isClaimed: isClaimed,
           },
         },
       });
-
     } catch (e) {
       console.log(e);
     }
@@ -44,14 +43,14 @@ export default function Shoprite() {
   return (
     <div>
       <h2>Food Listings</h2>
-      {data.foodListingsByDonorId.map((listing) => (
+      {data.foodListingsByDonorName.map((listing) => (
         <div key={listing._id} onSubmit={handleSubmit}>
-          <p>donor Id:{listing.donorId}</p>
+          <p>donor: {listing.donorname}</p>
           <p>Food Item: {listing.foodItem}</p>
           <p>Description: {listing.description}</p>
           <p>Expiry Date: {listing.expiryDate}</p>
           <p>Quantity: {listing.quantity}</p>
-          <p>Is Claimed: {listing.isClaimed ? 'Yes' : 'No'}</p>
+          <p>Is Claimed: {listing.isClaimed ? "Yes" : "No"}</p>
           <button type="submit">Claim Inventory</button>
           <hr />
         </div>
@@ -59,5 +58,3 @@ export default function Shoprite() {
     </div>
   );
 }
-
-

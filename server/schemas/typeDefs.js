@@ -68,9 +68,9 @@ const typeDefs = gql`
   }
 
   input UpdateFoodListingInput {
-    id: ID!
-    donorId: ID!
-    donorname: String!
+    id: ID
+    donorId: ID
+    donorname: String
     foodItem: String
     description: String
     expiryDate: String
