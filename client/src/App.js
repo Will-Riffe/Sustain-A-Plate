@@ -11,7 +11,7 @@ import Restaurants from "./pages/restaurants/restaurants";
 import Sustainability from "./pages/Sustainability/Sustainability"; // Imported the Sustainability component
 import Contact from "./pages/contact/contact";
 import RestaurantCards from "./components/restaurantCard/restaurantCards";
-import FoodListings from "./components/foodListings/foodListings"; // Update the import path based on the actual location of donorInventory.js
+import FoodListings from "./components/foodListings/foodListings";
 import Inventory from "./pages/Inventory/Inventory";
 import About from "./pages/about/About";
 
@@ -23,7 +23,6 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import DonorInventory from "./pages/donorInventory/donorInventory";
 
 const httpLink = createHttpLink({
   uri: process.env.MONGODB_URI, // Replace with your GraphQL server endpoint
@@ -74,7 +73,6 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/Sustainability" element={<Sustainability />} />
               <Route path="/foodListings" element={<FoodListings />} />
-              <Route path="/donorInventory" element={<DonorInventory />} />
               <Route path="/:donorName" element={<Inventory />} />
               <Route path="/about" element={<About />} />
             </Routes>

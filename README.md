@@ -12,8 +12,7 @@ Sustain-A-Plate is a web application that allows users to explore sustainable an
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
-- [Questions](#Questions)
+- [Questions](#questions)
 
 ## Features
 
@@ -39,11 +38,12 @@ cd Sustain-A-Plate
 
 3. Install dependencies for both the client and server:
 
+```
 cd client
 npm install
 cd ../server
 npm install
-
+```
 
 4. Set up environment variables:
 
@@ -51,16 +51,12 @@ npm install
 
 5. Seed the database (if applicable):
 
-
+```
 cd server
 npm run seed
+```
 
 - [Visit the website Here!](https://sustain-a-plate-a492ad2a8239.herokuapp.com/)
-
-## Usage
-
-To start the development server for both the client and server, run the following command from the project root:
-
 
 ## Usage
 
@@ -70,9 +66,9 @@ To start the development server for both the client and server, run the followin
 - Select the "Recovery History" option to see what food recoveries you have previously made. 
 
 To start the development server for both the client and server, run the following command from the project root:
-
+```
 npm run develop
-
+```
 
 The application will be accessible at `http://localhost:3000`.
 
@@ -106,10 +102,6 @@ To contribute to the project, follow these steps:
 
 Before making substantial changes, please open an issue to discuss the proposed changes.
 
-## License
-
-Sustain-A-Plate is released under the ISC License. See the [LICENSE](LICENSE) file for details.
-
 ## Questions
  Contacts for questions about the software:
 
@@ -128,10 +120,6 @@ Sustain-A-Plate is released under the ISC License. See the [LICENSE](LICENSE) fi
     Jason Geoghegan:
         https://github.com/ReallyAwesomeName
         jgeoghegan95@gmail.com
-
-    Rohin Manak:
-        https://github.com/RohinM14
-        rohinmanak1114@gmail.com
 
     Joseph Rodante:
         https://github.com/joeyrodo
