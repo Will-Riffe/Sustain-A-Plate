@@ -13,7 +13,7 @@ import Contact from "./pages/contact/contact";
 import RestaurantCards from "./components/restaurantCard/restaurantCards";
 import FoodListings from "./components/foodListings/foodListings"; // Update the import path based on the actual location of donorInventory.js
 import Inventory from "./pages/Inventory/Inventory";
-import About from "./pages/About";
+import About from "./pages/about/About";
 
 
 import "./App.css"; // DO NOT DELETE ;P
