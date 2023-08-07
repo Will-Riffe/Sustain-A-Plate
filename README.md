@@ -12,8 +12,7 @@ Sustain-A-Plate is a web application that allows users to explore sustainable an
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
-- [Questions](#Questions)
+- [Questions](#questions)
 
 ## Features
 
@@ -106,10 +105,6 @@ To contribute to the project, follow these steps:
 
 Before making substantial changes, please open an issue to discuss the proposed changes.
 
-## License
-
-Sustain-A-Plate is released under the ISC License. See the [LICENSE](LICENSE) file for details.
-
 ## Questions
  Contacts for questions about the software:
 
@@ -128,10 +123,6 @@ Sustain-A-Plate is released under the ISC License. See the [LICENSE](LICENSE) fi
     Jason Geoghegan:
         https://github.com/ReallyAwesomeName
         jgeoghegan95@gmail.com
-
-    Rohin Manak:
-        https://github.com/RohinM14
-        rohinmanak1114@gmail.com
 
     Joseph Rodante:
         https://github.com/joeyrodo
