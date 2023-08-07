@@ -38,11 +38,12 @@ cd Sustain-A-Plate
 
 3. Install dependencies for both the client and server:
 
+```
 cd client
 npm install
 cd ../server
 npm install
-
+```
 
 4. Set up environment variables:
 
@@ -50,16 +51,12 @@ npm install
 
 5. Seed the database (if applicable):
 
-
+```
 cd server
 npm run seed
+```
 
 - [Visit the website Here!](https://sustain-a-plate-a492ad2a8239.herokuapp.com/)
-
-## Usage
-
-To start the development server for both the client and server, run the following command from the project root:
-
 
 ## Usage
 
@@ -69,9 +66,9 @@ To start the development server for both the client and server, run the followin
 - Select the "Recovery History" option to see what food recoveries you have previously made. 
 
 To start the development server for both the client and server, run the following command from the project root:
-
+```
 npm run develop
-
+```
 
 The application will be accessible at `http://localhost:3000`.
 
