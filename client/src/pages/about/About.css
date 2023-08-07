@@ -1,4 +1,6 @@
-/* src/pages/About.css */
+*{
+  color: var(--textColor);
+}
 
 .about-page {
     max-width: 900px;
@@ -11,7 +13,7 @@
   .about-title {
     text-align: center;
     font-size: 2.5em;
-    color: #333;
+    color: var(--textColor);
     margin-bottom: 40px;
   }
   
