@@ -113,6 +113,6 @@
   }
 
   .lead-section {
-    background-image: none;
+    background-image: url(../../assets/home-back.png);
   }
 }
