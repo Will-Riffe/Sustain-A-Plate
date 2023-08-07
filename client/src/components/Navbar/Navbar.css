@@ -24,7 +24,7 @@ a h3 {
   font-weight:bold;
 }
 
-div a img {
+div.logo-container a img {
   height: 4rem;
   width: auto;
 }

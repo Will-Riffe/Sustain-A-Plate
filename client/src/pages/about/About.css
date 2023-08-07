@@ -1,5 +1,7 @@
 *{
   color: var(--textColor);
+  overflow: visible;
+
 }
 
 .about-page {
@@ -8,6 +10,9 @@
     padding: 20px;
     font-size: 18px;
     line-height: 1.6;
+    background-image: url(../../assets/about-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .about-title {

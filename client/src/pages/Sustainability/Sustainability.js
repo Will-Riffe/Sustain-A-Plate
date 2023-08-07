@@ -23,7 +23,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip right">
             <img src={tipTwo} alt="Tip 1" className="tip-image" />
-            <p className="sus">
+            <p className="sus two">
               <strong>Reduce Food Waste</strong><br /> Plan your meals and buy only what you need to minimize food waste. Consider composting food scraps to reduce landfill waste.
             </p>
           </div>
@@ -31,7 +31,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip">
             <img src={tipOne} alt="Tip 2" className="tip-image" />
-            <p className="fus">
+            <p className="fus one">
               <strong>Buy Local, Buy Seasonal</strong><br /> Support local farmers and reduce the carbon footprint of your meals by choosing foods that are in season and locally produced.
             </p>
           </div>
@@ -39,7 +39,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip right">
             <img src={tipThree} alt="Tip 3" className="tip-image" />
-            <p className="sus">
+            <p className="sus three">
             <strong>Opt for Plant-Based Meals</strong><br /> Incorporate more plant-based foods into your diet to reduce the environmental impact of meat production.
             </p>
           </div>
@@ -47,7 +47,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipFour} alt="Tip 4" className="tip-image" />
-            <p className="fus">
+            <p className="fus two">
             <strong>Reusable Containers & Utensils</strong><br /> Say no to single-use plastics by using reusable containers and utensils for your meals and snacks.
             </p>
           </div>
@@ -55,7 +55,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip right">
             <img src={tipFive} alt="Tip 5" className="tip-image" />
-            <p className="sus">
+            <p className="sus two">
             <strong>Conserve Water</strong><br /> Be mindful of water usage while cooking and cleaning. Fix leaks and opt for water-saving practices.
             </p>
           </div>
@@ -63,7 +63,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipSix} alt="Tip 6" className="tip-image" />
-            <p className="fus">
+            <p className="fus one">
             <strong>Support Sustainable Fishing</strong><br /> Choose seafood from sustainable sources to protect marine ecosystems and fish populations.
             </p>
           </div>
@@ -71,7 +71,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip right">
             <img src={tipSeven} alt="Tip 7" className="tip-image" />
-            <p className="sus">
+            <p className="sus three">
             <strong>Compost Food Scraps</strong><br /> Composting food scraps reduces landfill waste and creates nutrient-rich compost for your garden.
             </p>
           </div>
@@ -79,7 +79,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipEight} alt="Tip 8" className="tip-image" />
-            <p className="fus">
+            <p className="fus one">
             <strong>Shop Smart</strong><br /> Be a conscious consumer by supporting brands and products that prioritize sustainability and eco-friendly practices.
             </p>
           </div>
@@ -87,7 +87,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip right">
             <img src={tipNine} alt="Tip 9" className="tip-image" />
-            <p className="sus">
+            <p className="sus three">
             <strong>Educate Others</strong><br /> Share your sustainability knowledge with friends and family to promote awareness and collective action.
             </p>
           </div>
@@ -95,7 +95,7 @@ const Sustainability = () => {
         <Grid item xs={12} sm={6}>
           <div className="sustainability-tip left">
             <img src={tipTen} alt="Tip 10" className="tip-image" />
-            <p className="fus">
+            <p className="fus two">
               <strong>Advocate for Change</strong><br /> Get involved in local initiatives and advocate for policies that promote sustainable food systems and reduce food waste.
             </p>
           </div>

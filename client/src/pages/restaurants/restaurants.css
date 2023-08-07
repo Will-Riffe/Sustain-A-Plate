@@ -1,6 +1,47 @@
+* {
+  color: var(--textColor);
+
+}
+
 .restaurantCard-sections {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4vh 10vw;
     padding-top: 2rem;
 }
+
+  div.restaurantCard-sections img {
+    width: 15vw;
+    height: auto;
+    margin-top: 5vh;
+    
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: var(--textColor);
+  }
+
+  @media (max-width: 800px) {
+    .restaurantCard-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.restaurantCard-sections img {
+        width: 15vh;
+      }
+  }
+
+  @media (max-width: 500px) {
+    .restaurantCard-sections {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4vh 10vw;
+        padding-top: 2rem;
+    }
+
+    div.restaurantCard-sections img {
+        width: 15vh;
+      }
+  }

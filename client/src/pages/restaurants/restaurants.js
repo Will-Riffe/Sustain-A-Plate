@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RESTAURANTPICS from "../../assets/restaurant-templates/restaurantpics";
 import RestaurantCards from "../../components/restaurantCard/restaurantCards";
+import "./restaurants.css";
 
 export default function Restaurants() {
   // Data for each restaurant
@@ -43,23 +44,10 @@ export default function Restaurants() {
       <div className="restaurantCard-sections">
         {store.map((restcard, index) => (
           <Link to={restcard.link} key={index}>
-            {/* Move the RestaurantCards component inside the Link */}
             <RestaurantCards {...restcard} />
           </Link>
         ))}
       </div>
-      <style jsx>{`
-        h3 {
-          font-size: 1.5rem;
-          color: var(--textColor);
-        }
-
-        img {
-          width: 15vw;
-          height: auto;
-          margin-top: 5vh;
-        }
-      `}</style>
     </section>
   );
 }

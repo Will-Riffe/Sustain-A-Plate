@@ -3,7 +3,9 @@
     padding: 50px;
     text-align: center;
     color: var(--textColor);
-    background-color: var(--colorOne);
+    background-image: url(../../assets/about-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 30rem;
     margin:auto;
     margin-bottom: 20vw;
@@ -76,31 +78,17 @@
 
 @media (max-width: 550px) {
   .contact-section {
-    width: 15rem;    
+    width: 20rem;    
     margin-bottom: 40vw;
   }
   
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .contact-section {
-    padding: 1rem;
-    text-align: center;
-    color: var(--textColor);
-    background-color: var(--colorOne);
-    width: 15rem;
-    margin:auto;
+    padding: 20px;
+    width: 17rem;    
     margin-bottom: 50vw;
-
-  }
-  
-}
-
-@media (max-width: 450px) {
-  .contact-section {
-    width: 12rem;
-    margin:auto;
-    margin-bottom: 60vw;
   }
   
 }

@@ -10,13 +10,34 @@ p.sus{
     height:auto;
     text-align:end;
     font-weight: 300;
+    background-image: url(../../assets/about-back.png);
 }
+
 
 p.fus{
   width: 50%;
   height:auto;
   text-align:start;
   font-weight: 300;
+  background-image: url(../../assets/about-back.png);
+  background-repeat: no-repeat;
+
+}
+
+p.one{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+p.two {
+  background-size:cover;
+  background-position: center;
+}
+
+p.three{
+  background-repeat: no-repeat;
+  background-size:auto;
 }
 
 .tip-image {
