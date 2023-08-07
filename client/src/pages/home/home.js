@@ -12,7 +12,7 @@ const HomePage = () => {
           <div className="lead-text">
             <h1>
               <em>
-                Turn <u>Waste</u> into <u>Wonder</u>!
+                Turn <strong>WASTE</strong> into <strong>WONDER</strong>!
               </em>
             </h1>
             <p>Join the Movement for Sustainable Food!</p>
@@ -27,7 +27,6 @@ const HomePage = () => {
       </section>
 
       <div className="outfield-container">
-
         {/* Partner with Us section */}
         <section className="card-section">
           <h2>Partner with Us for Sustainable Growth</h2>
@@ -59,8 +58,8 @@ const HomePage = () => {
         <section className="card-section">
           <h2>Connecting Surplus Food to Those in Need</h2>
           <p>
-            We connect businesses with surplus food to charities, and
-            community groups to ensure less food goes to waste! We strive to benefit those
+            We connect businesses with surplus food to charities, and community
+            groups to ensure less food goes to waste! We strive to benefit those
             who need it most.
           </p>
           <Link to="/login" className="cta-button">

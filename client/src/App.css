@@ -13,6 +13,9 @@
   --textColor: #005555;
 }
 
+strong {
+  font-weight: bold;
+}
 
 .App {
   width: 100%;

@@ -15,7 +15,6 @@ import FoodListings from "./components/foodListings/foodListings"; // Update the
 import Inventory from "./pages/Inventory/Inventory";
 import About from "./pages/about/About";
 
-
 import "./App.css"; // DO NOT DELETE ;P
 import {
   ApolloClient,
@@ -78,7 +77,6 @@ function App() {
               <Route path="/donorInventory" element={<DonorInventory />} />
               <Route path="/:donorName" element={<Inventory />} />
               <Route path="/about" element={<About />} />
-
             </Routes>
           </div>
           <RestaurantCards />{" "}

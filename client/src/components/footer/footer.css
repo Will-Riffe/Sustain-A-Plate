@@ -6,7 +6,9 @@ footer {
   height: 100%;
   width: 100%;
   text-align: center;
-
+  border-top: solid;
+  border-width: 1px;
+  border-color: var(--textColor);
 }
 
 footer h3{

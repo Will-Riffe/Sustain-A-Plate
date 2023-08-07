@@ -18,6 +18,8 @@ import LockIcon from "@mui/icons-material/Lock";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ReorderIcon from "@mui/icons-material/Reorder";
 import AuthService from "../../utils/auth";
+import Logo from "../../assets/Sustain-A-Plate.png"
+
 function Navbar() {
   const [state, setState] = React.useState({
     navToggle: false,
@@ -120,7 +122,7 @@ return (
     {/* Centered Logo */}
     <div className="logo-container">
       <a href="/">
-        <h3>Sustain-A-Plate</h3>
+        <img src={Logo} alt="Sustain-A-Plate Logo" />
       </a>
     </div>
 

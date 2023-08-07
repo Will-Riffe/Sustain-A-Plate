@@ -4,8 +4,9 @@
     text-align: center;
     color: var(--textColor);
     background-color: var(--colorOne);
-    width: 30vw;
+    width: 30rem;
     margin:auto;
+    margin-bottom: 20vw;
   }
   
   .contact-form {
@@ -57,4 +58,49 @@
   button:focus {
     outline: none;
   }
+
+  @media (max-width: 1000px) {
+    .contact-section {
+      margin-bottom: 30vw;
+    }
+    
+  }
   
+@media (max-width: 650px) {
+  .contact-section {
+    width: 20rem;
+    margin-bottom: 35vw;
+  }
+  
+}
+
+@media (max-width: 550px) {
+  .contact-section {
+    width: 15rem;    
+    margin-bottom: 40vw;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .contact-section {
+    padding: 1rem;
+    text-align: center;
+    color: var(--textColor);
+    background-color: var(--colorOne);
+    width: 15rem;
+    margin:auto;
+    margin-bottom: 50vw;
+
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .contact-section {
+    width: 12rem;
+    margin:auto;
+    margin-bottom: 60vw;
+  }
+  
+}
