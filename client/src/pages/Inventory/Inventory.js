@@ -56,6 +56,8 @@ export default function InventoryPage() {
         <table className="food-listings-table">
           <thead>
             <tr>
+              <th>Donor</th>
+              <th>Food ID</th>
               <th>Food Item</th>
               <th>Description</th>
               <th>Expiry Date</th>
@@ -67,6 +69,8 @@ export default function InventoryPage() {
           <tbody>
             {data.foodListingsByDonorName.map((listing) => (
               <tr key={listing._id}>
+                <td>{listing.donorname}</td>
+                <td>{listing._id}</td>
                 <td>{listing.foodItem}</td>
                 <td>{listing.description}</td>
                 <td>
@@ -88,14 +92,14 @@ export default function InventoryPage() {
 
         {data.foodListingsByDonorName.map((listing) => (
           <div className="food-listing-card" key={listing._id}>
-            <h3><u>{listing.foodItem}</u></h3>
-            <p><u>Description:</u> {listing.description}</p>
+            <h3>{listing.foodItem}</h3>
+            <p>Description: {listing.description}</p>
             <p>
-              <u>Expiry Date:</u>{" "}
+              Expiry Date:{" "}
               {new Date(Number(listing.expiryDate)).toLocaleDateString("en-US")}
             </p>
-            <p><u>Quantity:</u> {listing.quantity}</p>
-            <p><u>Is Claimed:</u> {listing.isClaimed ? "Yes" : "No"}</p>
+            <p>Quantity: {listing.quantity}</p>
+            <p>Is Claimed: {listing.isClaimed ? "Yes" : "No"}</p>
             <button type="submit" onClick={handleSubmit}>
               Claim Inventory
             </button>

@@ -13,6 +13,7 @@ Sustain-A-Plate is a web application that allows users to explore sustainable an
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Questions](#questions)
+- [Image Credits](#image-credits)
 
 ## Features
 
@@ -124,3 +125,17 @@ Before making substantial changes, please open an issue to discuss the proposed 
     Joseph Rodante:
         https://github.com/joeyrodo
         joeyrodo@gmail.com
+
+
+## Image Credits
+
+[Tracey Benjamin](https://www.flickr.com/photos/shutterbean/16180262648/) <br />
+[Joes Retirement Blog](https://joesretirementblog.blogspot.com/2012/10/fish-pier-chatham-cape-cod.html) <br />
+[Gordon Gunn](https://gordongunnmd.com/womens_wellness/tag/superfoods/) <br />
+[Joseph Joseph](https://jdorganizer.blogspot.com/2014/02/3-innovative-food-storage-products.html) <br />
+[Julia M Cameron](https://www.pexels.com/@julia-m-cameron/) <br />
+[Tara Clark](https://www.pexels.com/@tara-clark-89384110/) <br />
+[Good Morning Wilton](https://goodmorningwilton.com/town-of-wilton-to-begin-food-scrap-recycling-pilot-program/) <br />
+[Mohamed Mahmoud](https://www.publicdomainpictures.net/en/view-image.php?image=242314&picture=shopping) <br />
+[Marco Verch](https://foto.wuestenigel.com/united-for-climate-strike-girl-protests-climate-politics-quot-act-now-quot-written-on-her-hands/) <br />
+[Name Absent](http://fullhdwall.com/water-drops-on-leaf-photo.html) <br />
